@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>상담신청 | 해향 해금학원</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Serif+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="contact">
+<div id="header"></div>
+<main>
+  <div id="subtop"></div>
+
+  <section class="sec" id="form">
+    <div class="wrap consult-layout">
+      <aside class="consult-side reveal">
+        <span class="eyebrow">CONSULT</span>
+        <h2>편하게 문의하세요</h2>
+        <p style="color:var(--muted)">전화 상담</p>
+        <a class="tel" href="tel:02-000-0000">02-000-0000</a>
+        <p style="color:var(--muted);font-size:14px">평일 10:00–21:00 · 토 10:00–17:00</p>
+        <ol class="steps">
+          <li>상담신청서 작성</li>
+          <li>담당 선생님 연락 (영업일 1일 이내)</li>
+          <li>방문 상담 · 레벨 진단</li>
+          <li>맞춤 과정 안내 후 수강 시작</li>
+        </ol>
+      </aside>
+
+      <form class="form reveal" id="inquiryForm" novalidate>
+        <div class="field"><label for="f-type">상담 분야 <i>*</i></label>
+          <select id="f-type" name="type" required>
+            <option value="">선택하세요</option>
+            <option>레슨 상담</option>
+            <option>입시 상담</option>
+            <option>원데이클래스</option>
+            <option>공연·축하연주</option>
+            <option>특강·출강</option>
+            <option>악기대여</option>
+            <option>기타</option>
+          </select>
+        </div>
+        <div class="field"><label for="f-name">이름 <i>*</i></label><input id="f-name" name="name" required autocomplete="name"></div>
+        <div class="field"><label for="f-tel">연락처 <i>*</i></label><input id="f-tel" name="tel" type="tel" required placeholder="010-0000-0000" autocomplete="tel"></div>
+        <div class="field"><label for="f-time">연락 가능 시간</label>
+          <select id="f-time" name="time"><option>무관</option><option>오전 (10–12시)</option><option>오후 (12–18시)</option><option>저녁 (18–21시)</option></select>
+        </div>
+        <div class="field full"><label for="f-msg">상담 내용 <i>*</i></label><textarea id="f-msg" name="message" required placeholder="수강 대상(초등/성인 등), 해금 경험 유무, 희망 요일·시간대를 적어주세요. 공연·특강은 일시와 장소를 함께 적어주세요."></textarea></div>
+        <label class="agree"><input type="checkbox" required id="f-agree"> 개인정보 수집·이용에 동의합니다. (필수)</label>
+        <div class="form-foot"><span class="form-msg" id="formMsg" role="status" aria-live="polite"></span><button class="btn btn-ink" type="submit">상담 신청하기</button></div>
+      </form>
+    </div>
+  </section>
+</main>
+<div id="footer"></div>
+<script src="js/common.js"></script>
+<script>
+  document.getElementById('inquiryForm').addEventListener('submit', e => {
+    e.preventDefault();
+    const f = e.target, msg = document.getElementById('formMsg');
+    const bad = [...f.querySelectorAll('[required]')].find(el => el.type === 'checkbox' ? !el.checked : !el.value.trim());
+    if (bad) { msg.style.color = 'var(--accent)'; msg.textContent = '필수 항목을 확인해 주세요.'; bad.focus(); return; }
+    // TODO: 실제 전송(이메일/폼 서비스/백엔드) 연결
+    msg.style.color = ''; msg.textContent = '상담 신청이 접수되었습니다. (데모: 전송 기능 미연결)';
+    f.reset();
+  });
+</script>
+</body>
+</html>

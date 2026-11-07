@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>수업영상 | 해향 해금학원</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Serif+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="video">
+<div id="header"></div>
+<main>
+  <div id="subtop"></div>
+  <section class="sec">
+    <div class="wrap">
+      <div class="filters" role="group" aria-label="영상 분류">
+        <button class="is-active" data-f="all">전체</button>
+        <button data-f="레슨">레슨</button>
+        <button data-f="공연">공연</button>
+        <button data-f="입시">입시</button>
+      </div>
+      <div class="grid g-3" id="videos"></div>
+    </div>
+  </section>
+</main>
+<div id="footer"></div>
+<script src="js/common.js"></script>
+<script>
+  // yt: 유튜브 영상 ID를 넣으면 썸네일 클릭 시 유튜브로 이동
+  const VIDEOS = [
+    { cat: '레슨', t: '성인 그룹레슨 – 아리랑', dur: '03:24', yt: '' },
+    { cat: '공연', t: '2026 정기 발표회 하이라이트', dur: '05:10', yt: '' },
+    { cat: '레슨', t: '초등반 – 첫 활 긋기', dur: '02:15', yt: '' },
+    { cat: '입시', t: '예고 입시 모의실기 – 산조', dur: '06:40', yt: '' },
+    { cat: '공연', t: '결혼식 축하연주 – 사랑의 인사', dur: '03:02', yt: '' },
+    { cat: '레슨', t: '1:1 레슨 – 운궁 교정 포인트', dur: '04:48', yt: '' },
+  ];
+  const box = document.getElementById('videos');
+  box.innerHTML = VIDEOS.map(v => `
+    <${v.yt ? `a href="https://www.youtube.com/watch?v=${v.yt}" target="_blank" rel="noopener"` : 'div'} class="v-card" data-cat="${v.cat}">
+      <div class="thumb"${v.yt ? ` style="background:url(https://i.ytimg.com/vi/${v.yt}/hqdefault.jpg) center/cover"` : ''}><span class="dur">${v.dur}</span></div>
+      <h3>${v.t}</h3><p>${v.cat}</p>
+    </${v.yt ? 'a' : 'div'}>`).join('');
+  document.querySelectorAll('.filters button').forEach(b => b.addEventListener('click', () => {
+    document.querySelectorAll('.filters button').forEach(x => x.classList.toggle('is-active', x === b));
+    box.querySelectorAll('.v-card').forEach(c => c.hidden = b.dataset.f !== 'all' && c.dataset.cat !== b.dataset.f);
+  }));
+</script>
+</body>
+</html>

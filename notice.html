@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>공지사항 | 해향 해금학원</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Serif+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="notice">
+<div id="header"></div>
+<main>
+  <div id="subtop"></div>
+  <section class="sec">
+    <div class="wrap">
+      <div class="board-tools">
+        <span class="count">전체 <b id="count">0</b>건</span>
+        <input type="search" id="q" placeholder="제목 검색" aria-label="공지 검색">
+      </div>
+      <ul class="notice-list" id="list"></ul>
+    </div>
+  </section>
+</main>
+<div id="footer"></div>
+<script src="js/common.js"></script>
+<script>
+  // 게시판 데이터(예시) — 추후 CMS/백엔드 연동
+  const NOTICES = [
+    { pin: true, t: '겨울방학 집중 특강 수강생 모집 안내', d: '2026.11.03', c: '12월 22일부터 4주간 초등·입시반 대상 집중 특강을 운영합니다. 정원 마감 시 조기 종료될 수 있습니다.' },
+    { t: '2027학년도 예고 입시 모의 실기 일정', d: '2026.10.28', c: '11월 둘째 주 토요일 오후 2시, 합주실에서 모의 실기를 진행합니다. 심사 후 개별 피드백을 드립니다.' },
+    { t: "정기 발표회 '두 줄의 노래' 개최 안내", d: '2026.10.15', c: '12월 14일(토) 오후 4시, OO아트홀에서 정기 발표회를 개최합니다. 가족·지인 누구나 관람 가능합니다.' },
+    { t: '추석 연휴 휴원 안내', d: '2026.09.20', c: '추석 연휴 기간에는 휴원합니다. 보강 일정은 담당 강사가 개별 안내드립니다.' },
+    { t: '성인 저녁반 신설 안내', d: '2026.09.01', c: '직장인을 위한 평일 저녁 8시 그룹반이 신설되었습니다.' },
+    { t: '악기 대여 서비스 시작', d: '2026.08.18', c: '입문 수강생을 위한 해금 월 대여 서비스를 시작합니다. 자세한 내용은 학원소개 > 주요활동을 확인하시고, 대여는 상담신청으로 문의해 주세요.' },
+  ];
+  const list = document.getElementById('list'), q = document.getElementById('q');
+  const render = () => {
+    const kw = q.value.trim();
+    const rows = NOTICES.map((n, i) => ({ ...n, no: NOTICES.length - i })).filter(n => !kw || n.t.includes(kw));
+    document.getElementById('count').textContent = rows.length;
+    list.innerHTML = rows.length ? rows.map(n => `
+      <li>
+        <button class="notice-q" aria-expanded="false">
+          <span class="n">${n.pin ? '<span class="badge">공지</span>' : n.no}</span>
+          <span class="t">${n.t}</span>
+          <span class="d">${n.d}</span>
+        </button>
+        <div class="notice-a">${n.c}</div>
+      </li>`).join('') : '<li style="padding:48px;text-align:center;color:var(--muted)">검색 결과가 없습니다.</li>';
+    list.querySelectorAll('.notice-q').forEach(b => b.addEventListener('click', () => {
+      const li = b.parentElement, open = !li.classList.contains('is-open');
+      li.classList.toggle('is-open', open); b.setAttribute('aria-expanded', open);
+    }));
+  };
+  q.addEventListener('input', render); render();
+</script>
+</body>
+</html>
