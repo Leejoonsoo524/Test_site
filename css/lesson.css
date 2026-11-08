@@ -33,7 +33,6 @@
 .check-list__item::before { content: ''; position: absolute; top: 4px; left: 0; width: 20px; height: 20px; border-radius: 50%; background: var(--color-point-soft); }
 .check-list__item::after { content: ''; position: absolute; top: 10px; left: 6px; width: 8px; height: 5px; border-bottom: 1.5px solid var(--color-point); border-left: 1.5px solid var(--color-point); transform: rotate(-45deg); }
 
-
 /* =========================================================
    반응형
    ========================================================= */
