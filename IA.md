@@ -6,6 +6,7 @@
 |---|---|---|---|
 | 0. 메인 | — | index.html | 레슨과정 / 입시 배너 / 공지·영상 / 주요활동 / 오시는길 |
 | 1. 학원소개 | 인사말 | about.html#greeting | |
+| | 수업방식 | about.html#approach | 레벨 진단 · 전공 강사 1:1 · 학기 발표회 (메인 ABOUT US 와 동일) |
 | | 강사진 | about.html#teachers | |
 | | 시설안내 | about.html#facility | |
 | | 주요활동 | about.html#activity | 공연 · 축하연주 · 특강·출강 · 악기대여 (원장 활동 소개) |
@@ -14,6 +15,7 @@
 | | 원데이클래스 | lesson.html#oneday | 형태별 |
 | | 초등레슨 | lesson.html#kids | 대상별 |
 | | 성인레슨 | lesson.html#adult | 대상별 |
+| | 입시레슨 | lesson.html#exam | 목표별 · 상세 요강·일정은 입시안내로 연결 |
 | 3. 입시안내 | 입시레슨 | admission.html#lesson | |
 | | 입시요강·일정 | admission.html#guide | |
 | | 합격실적 | admission.html#result | |

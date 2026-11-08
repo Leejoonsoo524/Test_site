@@ -1,7 +1,7 @@
 @charset "utf-8";
 /* =========================================================
    lesson.html — 레슨과정
-   순서: 과정 블록(사진+설명) · 수업정보 · 체크리스트 · 입시 바로가기 배너
+   순서: 과정 블록(사진+설명) · 수업정보 · 체크리스트
    ========================================================= */
 
 .sub-visual__panel--image { --sub-visual-image: url("../assets/img/sub-lesson.jpg"); }
@@ -14,6 +14,7 @@
 .lesson-item--group .lesson-item__photo img { object-position: 70% 50%; }
 .lesson-item--oneday .lesson-item__photo img { object-position: 50% 22%; }
 .lesson-item--adult .lesson-item__photo img { object-position: 30% 50%; }
+.lesson-item--exam .lesson-item__photo img { object-position: 15% 40%; }
 /* 과정 구분 라벨(형태별·대상별)은 한글이라 작게 유지 */
 .lesson-item__text .section-head__label { font-size: 16px; letter-spacing: 0; }
 .lesson-item__title { font-size: 38px; }
@@ -32,12 +33,6 @@
 .check-list__item::before { content: ''; position: absolute; top: 4px; left: 0; width: 20px; height: 20px; border-radius: 50%; background: var(--color-point-soft); }
 .check-list__item::after { content: ''; position: absolute; top: 10px; left: 6px; width: 8px; height: 5px; border-bottom: 1.5px solid var(--color-point); border-left: 1.5px solid var(--color-point); transform: rotate(-45deg); }
 
-/* ---------- 입시 바로가기 배너 ---------- */
-.exam-banner { position: relative; display: flex; align-items: center; justify-content: space-between; gap: 32px; padding: 64px; overflow: hidden; border: 1px solid var(--color-line); border-radius: var(--radius-lg); background: var(--color-point-soft); }
-.exam-banner::after { content: ''; position: absolute; top: 50%; right: -60px; width: 280px; height: 280px; border: 1.5px solid rgba(176, 52, 43, .18); border-radius: 50%; transform: translateY(-50%); }
-.exam-banner > * { position: relative; z-index: 1; }
-.exam-banner__title { font-size: 34px; }
-.exam-banner__desc { margin-top: 10px; color: var(--color-text); }
 
 /* =========================================================
    반응형
@@ -49,15 +44,12 @@
 @media (max-width: 1200px) {
   .lesson-item__inner { gap: 48px; }
   .lesson-item__title { font-size: 34px; }
-  .exam-banner { padding: 52px; }
-  .exam-banner__title { font-size: 30px; }
 }
 
 @media (max-width: 1024px) {
   .lesson-item__inner { grid-template-columns: 1fr; gap: 40px; }
   .lesson-item--reverse .lesson-item__photo { order: 0; }
   .lesson-item__photo { aspect-ratio: 4 / 3; }
-  .exam-banner { flex-direction: column; align-items: flex-start; padding: 48px 36px; }
 }
 
 @media (max-width: 768px) {
@@ -67,7 +59,4 @@
   .spec-list { gap: 8px; }
   .spec-list__item { padding: 14px; }
   .spec-list__desc { font-size: 15px; }
-  .exam-banner { padding: 40px 24px; }
-  .exam-banner__title { font-size: 26px; }
-  .exam-banner .btn { width: 100%; }
 }

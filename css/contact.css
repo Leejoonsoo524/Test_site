@@ -38,6 +38,19 @@
 .field--check { flex-direction: row; align-items: center; gap: 10px; min-height: 44px; color: var(--color-text); font-size: 14px; }
 .field__check { width: 18px; height: 18px; margin: 0; accent-color: var(--color-point); }
 
+/* 연락 가능 시간: 라디오 (알약 모양 선택지) */
+.field--radio { min-width: 0; margin: 0; padding: 0; border: 0; }
+.field--radio .field__label { margin-bottom: 8px; padding: 0; }
+.radio-group { display: flex; flex-wrap: wrap; gap: 8px; }
+.radio-option { position: relative; display: inline-flex; cursor: pointer; }
+.radio-option__input { position: absolute; width: 1px; height: 1px; opacity: 0; }
+.radio-option__text { display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 0 20px; border: 1px solid var(--color-line); border-radius: var(--radius-full); background: var(--color-bg); color: var(--color-text); font-size: 15px; transition: border-color .2s, background-color .2s, color .2s; }
+.radio-option__text::before { content: ''; flex-shrink: 0; width: 16px; height: 16px; border: 1.5px solid var(--color-line-strong); border-radius: 50%; background: var(--color-white); transition: border-color .2s, box-shadow .2s; }
+.radio-option:hover .radio-option__text { border-color: var(--color-point); color: var(--color-point); }
+.radio-option__input:checked + .radio-option__text { border-color: var(--color-point); background: var(--color-point); color: var(--color-white); font-weight: 600; }
+.radio-option__input:checked + .radio-option__text::before { border-color: var(--color-white); box-shadow: inset 0 0 0 4px var(--color-point); }
+.radio-option__input:focus-visible + .radio-option__text { outline: 2px solid var(--color-point); outline-offset: 3px; }
+
 /* =========================================================
    반응형
    ========================================================= */
@@ -56,6 +69,8 @@
 }
 
 @media (max-width: 768px) {
+  .radio-group { display: grid; grid-template-columns: 1fr 1fr; }
+  .radio-option__text { justify-content: flex-start; width: 100%; padding: 0 16px; font-size: 14px; }
   .consult-side { padding: 32px 24px; }
   .consult-form { padding: 28px 20px; }
   .consult-form__fieldset { grid-template-columns: 1fr; }

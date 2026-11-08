@@ -57,6 +57,26 @@
     });
   }
 
+  /* ---------- LNB: 가로로 넘치면 스크롤 막대 표시 ---------- */
+  var lnb = document.querySelector('.lnb');
+  var lnbList = lnb && lnb.querySelector('.lnb__list');
+  if (lnbList) {
+    var checkLnb = function () {
+      var track = lnbList.clientWidth;
+      var max = lnbList.scrollWidth - track;
+      lnb.classList.toggle('is-scrollable', max > 2);
+      lnb.classList.toggle('is-end', lnbList.scrollLeft >= max - 2);
+      if (max > 2) {
+        var bar = track * track / lnbList.scrollWidth;
+        lnb.style.setProperty('--lnb-bar-w', bar + 'px');
+        lnb.style.setProperty('--lnb-bar-x', ((track - bar) * lnbList.scrollLeft / max) + 'px');
+      }
+    };
+    checkLnb();
+    lnbList.addEventListener('scroll', checkLnb, { passive: true });
+    window.addEventListener('resize', checkLnb);
+  }
+
   /* ---------- LNB: 현재 보고 있는 섹션 표시 ---------- */
   var lnbLinks = Array.prototype.slice.call(document.querySelectorAll('.lnb__link'));
   if (lnbLinks.length && 'IntersectionObserver' in window) {

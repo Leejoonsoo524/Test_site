@@ -187,8 +187,17 @@ a.photo:hover img, a:hover > .photo img { transform: scale(1.03); }
 .breadcrumb__item a:hover { color: var(--color-point); }
 
 .lnb { position: sticky; top: var(--header-height); z-index: 50; margin-top: 24px; background: rgba(252, 251, 248, .92); backdrop-filter: blur(12px); }
-.lnb__list { display: flex; align-items: center; gap: 8px; height: var(--lnb-height); overflow-x: auto; border-bottom: 1px solid var(--color-line); scrollbar-width: none; }
+.lnb .inner { position: relative; }
+.lnb__list { display: flex; align-items: center; gap: 8px; height: var(--lnb-height); overflow-x: auto; border-bottom: 1px solid var(--color-line); scrollbar-width: none; -webkit-overflow-scrolling: touch; }
 .lnb__list::-webkit-scrollbar { display: none; }
+.lnb__list > li { flex-shrink: 0; }
+/* 가로 스크롤 막대: 탭이 화면보다 길 때만 탭 아래에 표시. 막대 길이·위치는 js/common.js 가 --lnb-bar-w / --lnb-bar-x 로 넣어 줍니다
+   (모바일 브라우저는 기본 스크롤바를 스크롤할 때만 잠깐 보여 주므로 직접 그립니다) */
+.lnb .inner::before { content: ''; position: absolute; right: var(--inner-padding); bottom: 0; left: var(--inner-padding); z-index: 1; height: 3px; border-radius: 3px; background: linear-gradient(var(--color-point), var(--color-point)) var(--lnb-bar-x, 0) 0 / var(--lnb-bar-w, 0) 100% no-repeat, var(--color-line); opacity: 0; pointer-events: none; transition: opacity .25s; }
+.lnb.is-scrollable .inner::before { opacity: 1; }
+/* 오른쪽에 더 있는 탭이 있다는 표시 */
+.lnb .inner::after { content: ''; position: absolute; top: 0; right: var(--inner-padding); bottom: 3px; width: 48px; background: linear-gradient(90deg, rgba(252, 251, 248, 0), var(--color-bg)); opacity: 0; pointer-events: none; transition: opacity .25s; }
+.lnb.is-scrollable:not(.is-end) .inner::after { opacity: 1; }
 .lnb__link { display: flex; align-items: center; min-height: 44px; padding: 0 20px; border: 1px solid transparent; border-radius: var(--radius-full); color: var(--color-muted); font-size: 15px; font-weight: 600; white-space: nowrap; transition: color .2s, background-color .2s, border-color .2s; }
 .lnb__link:hover { border-color: var(--color-point); background: var(--color-point); color: var(--color-white); }
 .lnb__link.is-active { border-color: var(--color-point); background: var(--color-point); color: var(--color-white); }
@@ -255,6 +264,8 @@ body [data-aos].hover-card { transition-property: opacity, transform, translate,
   .gnb__link { height: auto; padding: 18px 0; font-size: 19px; font-weight: 700; }
   .gnb__link::after { display: none; }
   .gnb__sub { position: static; display: flex; flex-wrap: wrap; gap: 0 20px; min-width: 0; padding: 0 0 16px; border: 0; background: none; box-shadow: none; opacity: 1; visibility: visible; transform: none; }
+  /* 데스크톱 드롭다운의 가운데 정렬 이동(translate -50%)이 모바일 메뉴에 걸려 서브메뉴가 밀리지 않도록 */
+  .gnb__item:hover .gnb__sub, .gnb__item:focus-within .gnb__sub { transform: none; }
   .gnb__sub-link { display: inline-flex; align-items: center; min-height: 44px; padding: 0; font-size: 15px; }
   .gnb__sub-link:hover { background: none; }
   .gnb__util { display: grid; gap: 10px; margin-top: auto; padding-top: 32px; }
