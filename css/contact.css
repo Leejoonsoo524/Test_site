@@ -1,10 +1,8 @@
 @charset "utf-8";
 /* =========================================================
    contact.html — 상담신청
-   순서: 서브비주얼 사진 위치 · 안내 영역 · 상담 폼
+   순서: 안내 영역 · 상담 폼
    ========================================================= */
-
-.sub-visual__photo img { object-position: 50% 30%; }
 
 .consult__inner { display: grid; grid-template-columns: 1fr 1.8fr; align-items: start; gap: 48px; }
 

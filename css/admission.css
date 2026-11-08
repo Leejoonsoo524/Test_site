@@ -1,10 +1,10 @@
 @charset "utf-8";
 /* =========================================================
    admission.html — 입시안내
-   순서: 서브비주얼 사진 위치 · 입시레슨(단계·반) · 입시요강 표 · 합격실적
+   순서: 서브비주얼 배경 · 입시레슨(단계·반) · 입시요강 표 · 합격실적
    ========================================================= */
 
-.sub-visual__photo img { object-position: 20% 40%; }
+.sub-visual__panel--image { --sub-visual-image: url("../assets/img/sub-admission.jpg"); }
 
 /* ---------- 입시레슨 단계 ---------- */
 .process-list { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; counter-reset: process; }

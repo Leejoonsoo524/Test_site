@@ -1,10 +1,8 @@
 @charset "utf-8";
 /* =========================================================
    notice.html — 공지사항
-   순서: 서브비주얼 사진 위치 · 검색 영역 · 공지 목록(details)
+   순서: 검색 영역 · 공지 목록(details)
    ========================================================= */
-
-.sub-visual__photo img { object-position: 50% 25%; }
 
 /* ---------- 검색 영역 ---------- */
 .board-tools { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 24px; }

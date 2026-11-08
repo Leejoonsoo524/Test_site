@@ -1,4 +1,4 @@
-# 해향 해금학원 — IA (v0.2)
+# 해향국악학원 — IA (v0.2)
 
 ## 사이트맵
 
@@ -40,7 +40,7 @@
 | 구분 | 파일 | 역할 |
 |---|---|---|
 | 공통 CSS | css/common.css | 변수·리셋·버튼·헤더/GNB·서브비주얼·LNB·푸터 |
-| 페이지 CSS | css/[페이지명].css | index · about · lesson · admission · notice · video · location · contact · credits |
+| 페이지 CSS | css/[페이지명].css | index · about · lesson · admission · notice · video · location · contact · privacy |
 | 공통 JS | js/common.js | 헤더 스크롤, 모바일 메뉴, LNB 현재 위치 |
 | 페이지 JS | js/main.js · js/notice.js · js/video.js · js/contact.js | 메인 레슨 이미지 전환 · 공지 검색 · 영상 필터 · 폼 확인 |
 

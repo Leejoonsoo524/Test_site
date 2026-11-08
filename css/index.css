@@ -23,16 +23,11 @@
 .main-visual__photo img { object-position: 40% 40%; }
 
 /* 메인 비주얼 슬라이드 */
-.main-visual__slide { position: absolute; inset: 0; opacity: 0; visibility: hidden; transition: opacity 1.2s var(--ease), visibility 1.2s; }
+.main-visual__slide { position: absolute; inset: 0; opacity: 0; visibility: hidden; transition: opacity .8s var(--ease), visibility .8s; }
 .main-visual__slide.is-active { opacity: 1; visibility: visible; }
-.main-visual__slide img { transform: scale(1.08); transition: transform 6s linear; }
+.main-visual__slide img { transform: scale(1.05); transition: transform 2.6s linear; }
 .main-visual__slide.is-active img { transform: scale(1); }
 .main-visual__slide + .main-visual__slide img { object-position: 50% 40%; }
-.main-visual__dots { position: absolute; bottom: 24px; left: 50%; z-index: 2; display: flex; gap: 2px; padding: 4px 8px; border-radius: var(--radius-full); background: rgba(255, 255, 255, .8); backdrop-filter: blur(8px); box-shadow: var(--shadow-sm); transform: translateX(-50%); animation: mainRise .8s var(--ease) .9s both; }
-.main-visual__dot { display: grid; place-items: center; width: 28px; height: 28px; }
-.main-visual__dot::before { content: ''; width: 8px; height: 8px; border-radius: var(--radius-full); background: var(--color-line-strong); transition: width .35s var(--ease), background-color .25s; }
-.main-visual__dot:hover::before { background: var(--color-point); }
-.main-visual__dot.is-active::before { width: 22px; background: var(--color-point); }
 .main-visual__seal { position: absolute; bottom: 48px; left: -44px; display: grid; place-items: center; width: 112px; height: 112px; border: 2px solid var(--color-white); border-radius: 50%; background: var(--color-point); box-shadow: 0 20px 40px -20px rgba(176, 52, 43, .8); color: var(--color-white); font-family: var(--font-serif); font-size: 30px; font-weight: 600; letter-spacing: .02em; writing-mode: vertical-rl; }
 
 /* 첫 화면 등장 효과 (1회) */

@@ -4,6 +4,8 @@
    순서: 과정 블록(사진+설명) · 수업정보 · 체크리스트 · 입시 바로가기 배너
    ========================================================= */
 
+.sub-visual__panel--image { --sub-visual-image: url("../assets/img/sub-lesson.jpg"); }
+
 /* ---------- 과정 블록 ---------- */
 .lesson-item__inner { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 80px; }
 .lesson-item--reverse .lesson-item__photo { order: 2; }

@@ -1,10 +1,10 @@
 @charset "utf-8";
 /* =========================================================
    about.html — 학원소개
-   순서: 서브비주얼 사진 위치 · 인사말 · 강사진 · 시설안내 · 주요활동
+   순서: 서브비주얼 배경 · 인사말 · 강사진 · 시설안내 · 주요활동
    ========================================================= */
 
-.sub-visual__photo img { object-position: 75% 50%; }
+.sub-visual__panel--image { --sub-visual-image: url("../assets/img/sub-about.jpg"); }
 
 /* ---------- 인사말 ---------- */
 .greeting__inner { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 80px; }
