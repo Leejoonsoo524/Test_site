@@ -1,92 +1,291 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="utf-8">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>레슨과정 | 해향 해금학원</title>
+<meta name="description" content="1:1 레슨, 그룹레슨, 원데이클래스, 초등레슨, 성인레슨까지 해향 해금학원의 레슨과정을 안내합니다.">
+<meta name="theme-color" content="#fcfbf8">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="해향 해금학원">
+<meta property="og:title" content="레슨과정 | 해향 해금학원">
+<meta property="og:description" content="1:1 레슨, 그룹레슨, 원데이클래스, 초등레슨, 성인레슨까지 해향 해금학원의 레슨과정을 안내합니다.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Serif+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600&amp;display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/lesson.css">
+<noscript><link rel="stylesheet" href="css/noscript.css"></noscript>
 </head>
-<body data-page="lesson">
-<div id="header"></div>
-<main>
-  <div id="subtop"></div>
+<body>
+<a class="skip-link" href="#main">본문 바로가기</a>
 
-  <section class="sec" id="private">
-    <div class="wrap feature">
-      <div class="ph reveal">1:1 레슨 사진</div>
-      <div class="reveal">
-        <span class="eyebrow">형태별 · 01</span>
-        <h2>1:1 레슨</h2>
-        <p class="lead">수강생의 수준과 목표에 맞춰 진도와 곡을 설계하는 개인 맞춤 레슨입니다.</p>
-        <dl class="spec"><div><dt>대상</dt><dd>입문~심화</dd></div><div><dt>시간</dt><dd>회당 50분</dd></div><div><dt>횟수</dt><dd>주 1~2회</dd></div></dl>
-        <ul class="check"><li>첫 수업 레벨 진단</li><li>개인별 진도표 제공</li><li>연습 영상 피드백</li></ul>
+<header class="header" id="header">
+  <div class="inner header__inner">
+    <a class="logo" href="index.html" aria-label="해향 해금학원 홈">
+      <span class="logo__mark" aria-hidden="true"></span>
+      <span class="logo__text"><span class="logo__name">해향</span><span class="logo__sub">HAEGEUM ACADEMY</span></span>
+    </a>
+    <nav class="gnb" id="gnb" aria-label="주 메뉴">
+      <ul class="gnb__list">
+        <li class="gnb__item">
+          <a class="gnb__link" href="about.html">학원소개</a>
+          <ul class="gnb__sub">
+            <li><a class="gnb__sub-link" href="about.html#greeting">인사말</a></li>
+            <li><a class="gnb__sub-link" href="about.html#teachers">강사진</a></li>
+            <li><a class="gnb__sub-link" href="about.html#facility">시설안내</a></li>
+            <li><a class="gnb__sub-link" href="about.html#activity">주요활동</a></li>
+          </ul>
+        </li>
+        <li class="gnb__item">
+          <a class="gnb__link" href="lesson.html" aria-current="page">레슨과정</a>
+          <ul class="gnb__sub">
+            <li><a class="gnb__sub-link" href="lesson.html#private">1:1 레슨</a></li>
+            <li><a class="gnb__sub-link" href="lesson.html#group">그룹레슨</a></li>
+            <li><a class="gnb__sub-link" href="lesson.html#oneday">원데이클래스</a></li>
+            <li><a class="gnb__sub-link" href="lesson.html#kids">초등레슨</a></li>
+            <li><a class="gnb__sub-link" href="lesson.html#adult">성인레슨</a></li>
+          </ul>
+        </li>
+        <li class="gnb__item">
+          <a class="gnb__link" href="admission.html">입시안내</a>
+          <ul class="gnb__sub">
+            <li><a class="gnb__sub-link" href="admission.html#lesson">입시레슨</a></li>
+            <li><a class="gnb__sub-link" href="admission.html#guide">입시요강·일정</a></li>
+            <li><a class="gnb__sub-link" href="admission.html#result">합격실적</a></li>
+          </ul>
+        </li>
+        <li class="gnb__item">
+          <a class="gnb__link" href="notice.html">공지사항</a>
+        </li>
+        <li class="gnb__item">
+          <a class="gnb__link" href="video.html">수업영상</a>
+        </li>
+        <li class="gnb__item">
+          <a class="gnb__link" href="location.html">오시는길</a>
+        </li>
+      </ul>
+      <div class="gnb__util">
+        <a class="btn btn--primary" href="contact.html">상담신청</a>
+        <a class="btn btn--outline" href="tel:02-000-0000">전화상담 02-000-0000</a>
+      </div>
+    </nav>
+    <a class="btn btn--primary btn--sm header__cta" href="contact.html">상담신청</a>
+    <button type="button" class="menu-btn" aria-controls="gnb" aria-expanded="false">
+      <span class="sr-only">전체 메뉴 열기</span>
+      <span class="menu-btn__line" aria-hidden="true"></span>
+      <span class="menu-btn__line" aria-hidden="true"></span>
+      <span class="menu-btn__line" aria-hidden="true"></span>
+    </button>
+  </div>
+</header>
+
+<main class="main" id="main">
+  <section class="sub-visual" aria-labelledby="page-title">
+    <div class="inner">
+      <div class="sub-visual__panel">
+        <div class="sub-visual__text" data-aos="fade-up">
+          <nav aria-label="현재 위치">
+            <ol class="breadcrumb">
+              <li class="breadcrumb__item"><a href="index.html">홈</a></li>
+              <li class="breadcrumb__item" aria-current="page">레슨과정</li>
+            </ol>
+          </nav>
+          <h1 class="sub-visual__title" id="page-title">레슨과정</h1>
+          <p class="sub-visual__desc">형태와 대상에 맞춘 다섯 가지 과정</p>
+        </div>
+        <div class="sub-visual__photo photo" data-aos="fade-left" data-aos-delay="150">
+          <img src="assets/img/photo-f190465975-960.jpg" srcset="assets/img/photo-f190465975-500.jpg 500w, assets/img/photo-f190465975-960.jpg 960w" sizes="(max-width: 1024px) 100vw, 460px" width="960" height="600" alt="국악 합주 무대" fetchpriority="high" decoding="async">
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="sec sec-alt" id="group">
-    <div class="wrap feature rev">
-      <div class="ph reveal">그룹레슨 사진</div>
-      <div class="reveal">
-        <span class="eyebrow">형태별 · 02</span>
-        <h2>그룹레슨</h2>
-        <p class="lead">3~6명이 함께 배우며 합주의 즐거움을 느끼는 과정입니다. 학기 말 발표회 무대에 함께 섭니다.</p>
-        <dl class="spec"><div><dt>정원</dt><dd>3~6명</dd></div><div><dt>시간</dt><dd>회당 80분</dd></div><div><dt>기간</dt><dd>3개월 과정</dd></div></dl>
+  <nav class="lnb" aria-label="레슨과정 하위 메뉴">
+    <div class="inner">
+      <ul class="lnb__list">
+        <li><a class="lnb__link" href="#private">1:1 레슨</a></li>
+        <li><a class="lnb__link" href="#group">그룹레슨</a></li>
+        <li><a class="lnb__link" href="#oneday">원데이클래스</a></li>
+        <li><a class="lnb__link" href="#kids">초등레슨</a></li>
+        <li><a class="lnb__link" href="#adult">성인레슨</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="section lesson-item lesson-item--private" id="private" aria-labelledby="private-title">
+    <div class="inner lesson-item__inner">
+      <div class="lesson-item__photo photo" data-aos="fade-up">
+        <img src="assets/img/photo-f39232562-960.jpg" srcset="assets/img/photo-f39232562-500.jpg 500w, assets/img/photo-f39232562-960.jpg 960w" sizes="(max-width: 1024px) 100vw, 600px" width="960" height="720" alt="한복을 입고 해금을 연주하는 모습" loading="lazy" decoding="async">
+      </div>
+      <div class="lesson-item__text" data-aos="fade-up" data-aos-delay="150">
+        <p class="section-head__label">형태별 · 01</p>
+        <h2 class="lesson-item__title" id="private-title">1:1 레슨</h2>
+        <p class="lesson-item__desc">수강생의 수준과 목표에 맞춰 진도와 곡을 설계하는 개인 맞춤 레슨입니다.</p>
+        <dl class="spec-list">
+          <div class="spec-list__item"><dt class="spec-list__term">대상</dt><dd class="spec-list__desc">입문~심화</dd></div>
+          <div class="spec-list__item"><dt class="spec-list__term">시간</dt><dd class="spec-list__desc">회당 50분</dd></div>
+          <div class="spec-list__item"><dt class="spec-list__term">횟수</dt><dd class="spec-list__desc">주 1~2회</dd></div>
+        </dl>
+        <ul class="check-list">
+          <li class="check-list__item">첫 수업 레벨 진단</li>
+          <li class="check-list__item">개인별 진도표 제공</li>
+          <li class="check-list__item">연습 영상 피드백</li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <section class="sec" id="oneday">
-    <div class="wrap feature">
-      <div class="ph reveal">원데이클래스 사진</div>
-      <div class="reveal">
-        <span class="eyebrow">형태별 · 03</span>
-        <h2>원데이클래스</h2>
-        <p class="lead">악기가 없어도 괜찮습니다. 하루 만에 해금을 잡고, 간단한 곡 한 소절을 연주해 봅니다.</p>
-        <dl class="spec"><div><dt>준비물</dt><dd>없음(악기 제공)</dd></div><div><dt>시간</dt><dd>120분</dd></div><div><dt>정원</dt><dd>최대 8명</dd></div></dl>
-        <a class="btn btn-ink" href="contact.html#form" style="margin-top:28px">원데이클래스 신청</a>
+  <section class="section section--gray lesson-item lesson-item--group lesson-item--reverse" id="group" aria-labelledby="group-title">
+    <div class="inner lesson-item__inner">
+      <div class="lesson-item__photo photo" data-aos="fade-up">
+        <img src="assets/img/photo-f31716477-960.jpg" srcset="assets/img/photo-f31716477-500.jpg 500w, assets/img/photo-f31716477-960.jpg 960w" sizes="(max-width: 1024px) 100vw, 600px" width="960" height="640" alt="보면대 앞에서 국악기를 함께 연주하는 합주" loading="lazy" decoding="async">
+      </div>
+      <div class="lesson-item__text" data-aos="fade-up" data-aos-delay="150">
+        <p class="section-head__label">형태별 · 02</p>
+        <h2 class="lesson-item__title" id="group-title">그룹레슨</h2>
+        <p class="lesson-item__desc">3~6명이 함께 배우며 합주의 즐거움을 느끼는 과정입니다. 학기 말 발표회 무대에 함께 섭니다.</p>
+        <dl class="spec-list">
+          <div class="spec-list__item"><dt class="spec-list__term">정원</dt><dd class="spec-list__desc">3~6명</dd></div>
+          <div class="spec-list__item"><dt class="spec-list__term">시간</dt><dd class="spec-list__desc">회당 80분</dd></div>
+          <div class="spec-list__item"><dt class="spec-list__term">기간</dt><dd class="spec-list__desc">3개월 과정</dd></div>
+        </dl>
       </div>
     </div>
   </section>
 
-  <section class="sec sec-alt" id="kids">
-    <div class="wrap feature rev">
-      <div class="ph reveal">초등레슨 사진</div>
-      <div class="reveal">
-        <span class="eyebrow">대상별 · 04</span>
-        <h2>초등레슨</h2>
-        <p class="lead">리듬 놀이와 동요로 시작해 국악의 장단과 감성을 자연스럽게 익힙니다. 예중 진학을 원하면 입시 과정으로 연계합니다.</p>
-        <ul class="check"><li>저학년 / 고학년 반 구분</li><li>학기별 발표회</li><li>예중 입시반 연계</li></ul>
+  <section class="section lesson-item lesson-item--oneday" id="oneday" aria-labelledby="oneday-title">
+    <div class="inner lesson-item__inner">
+      <div class="lesson-item__photo photo" data-aos="fade-up">
+        <img src="assets/img/photo-f30235135-960.jpg" srcset="assets/img/photo-f30235135-500.jpg 500w, assets/img/photo-f30235135-960.jpg 960w" sizes="(max-width: 1024px) 100vw, 600px" width="960" height="1442" alt="활과 함께 세워 둔 해금" loading="lazy" decoding="async">
+      </div>
+      <div class="lesson-item__text" data-aos="fade-up" data-aos-delay="150">
+        <p class="section-head__label">형태별 · 03</p>
+        <h2 class="lesson-item__title" id="oneday-title">원데이클래스</h2>
+        <p class="lesson-item__desc">악기가 없어도 괜찮습니다. 하루 만에 해금을 잡고, 간단한 곡 한 소절을 연주해 봅니다.</p>
+        <dl class="spec-list">
+          <div class="spec-list__item"><dt class="spec-list__term">준비물</dt><dd class="spec-list__desc">없음(악기 제공)</dd></div>
+          <div class="spec-list__item"><dt class="spec-list__term">시간</dt><dd class="spec-list__desc">120분</dd></div>
+          <div class="spec-list__item"><dt class="spec-list__term">정원</dt><dd class="spec-list__desc">최대 8명</dd></div>
+        </dl>
+        <a class="btn btn--primary lesson-item__btn" href="contact.html">원데이클래스 신청하기 <span class="btn__icon" aria-hidden="true">→</span></a>
       </div>
     </div>
   </section>
 
-  <section class="sec" id="adult">
-    <div class="wrap feature">
-      <div class="ph reveal">성인레슨 사진</div>
-      <div class="reveal">
-        <span class="eyebrow">대상별 · 05</span>
-        <h2>성인레슨</h2>
-        <p class="lead">퇴근 후, 주말에 나를 위한 시간. 가요·OST부터 정악·산조까지 원하는 곡으로 배웁니다.</p>
-        <ul class="check"><li>평일 저녁·주말 시간대</li><li>1:1 / 그룹 선택 가능</li><li>악기 대여 연계</li></ul>
+  <section class="section section--gray lesson-item lesson-item--kids lesson-item--reverse" id="kids" aria-labelledby="kids-title">
+    <div class="inner lesson-item__inner">
+      <div class="lesson-item__photo placeholder" data-aos="fade-up">초등레슨 사진</div>
+      <div class="lesson-item__text" data-aos="fade-up" data-aos-delay="150">
+        <p class="section-head__label">대상별 · 04</p>
+        <h2 class="lesson-item__title" id="kids-title">초등레슨</h2>
+        <p class="lesson-item__desc">리듬 놀이와 동요로 시작해 국악의 장단과 감성을 자연스럽게 익힙니다. 예중 진학을 원하면 입시 과정으로 연계합니다.</p>
+        <ul class="check-list">
+          <li class="check-list__item">저학년 / 고학년 반 구분</li>
+          <li class="check-list__item">학기별 발표회</li>
+          <li class="check-list__item">예중 입시반 연계</li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <!-- 입시레슨은 입시안내로 배치, 여기서는 바로가기 -->
-  <section class="sec sec-alt">
-    <div class="wrap">
-      <div class="banner reveal">
-        <div><span class="eyebrow">ADMISSION</span><h2>입시레슨을 찾으시나요?</h2><p>입시레슨은 입시안내 메뉴에서 일정·요강과 함께 확인하실 수 있습니다.</p></div>
-        <a class="btn btn-light" href="admission.html#lesson">입시레슨 보기</a>
+  <section class="section lesson-item lesson-item--adult" id="adult" aria-labelledby="adult-title">
+    <div class="inner lesson-item__inner">
+      <div class="lesson-item__photo photo" data-aos="fade-up">
+        <img src="assets/img/photo-f190466059-960.jpg" srcset="assets/img/photo-f190466059-500.jpg 500w, assets/img/photo-f190466059-960.jpg 960w" sizes="(max-width: 1024px) 100vw, 600px" width="960" height="600" alt="한복을 입고 해금·가야금·대금을 연주하는 무대" loading="lazy" decoding="async">
+      </div>
+      <div class="lesson-item__text" data-aos="fade-up" data-aos-delay="150">
+        <p class="section-head__label">대상별 · 05</p>
+        <h2 class="lesson-item__title" id="adult-title">성인레슨</h2>
+        <p class="lesson-item__desc">퇴근 후, 주말에 나를 위한 시간. 가요·OST부터 정악·산조까지 원하는 곡으로 배웁니다.</p>
+        <ul class="check-list">
+          <li class="check-list__item">평일 저녁·주말 시간대</li>
+          <li class="check-list__item">1:1 / 그룹 선택 가능</li>
+          <li class="check-list__item">악기 대여 연계</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 입시레슨은 입시안내 메뉴에 있으므로 바로가기 배너로 연결 -->
+  <section class="section section--gray" aria-labelledby="exam-banner-title">
+    <div class="inner">
+      <div class="exam-banner" data-aos="zoom-in-up">
+        <div class="exam-banner__text">
+          <p class="section-head__label">Admission</p>
+          <h2 class="exam-banner__title" id="exam-banner-title">입시레슨을 찾으시나요?</h2>
+          <p class="exam-banner__desc">입시레슨은 입시안내 메뉴에서 일정·요강과 함께 확인하실 수 있습니다.</p>
+        </div>
+        <a class="btn btn--primary" href="admission.html#lesson">입시레슨 보기 <span class="btn__icon" aria-hidden="true">→</span></a>
       </div>
     </div>
   </section>
 </main>
-<div id="footer"></div>
+
+<footer class="footer">
+  <div class="inner footer__inner">
+    <div class="footer__brand">
+      <a class="logo" href="index.html" aria-label="해향 해금학원 홈">
+        <span class="logo__mark" aria-hidden="true"></span>
+        <span class="logo__text"><span class="logo__name">해향</span><span class="logo__sub">HAEGEUM ACADEMY</span></span>
+      </a>
+      <address class="footer__address">
+        서울특별시 OO구 OO로 00, 3층<br>
+        TEL <a href="tel:02-000-0000">02-000-0000</a> · 평일 10:00–21:00 · 토 10:00–17:00
+      </address>
+    </div>
+    <nav class="footer__sitemap" aria-label="사이트맵">
+      <ul class="footer__sitemap-list">
+        <li class="footer__group">
+          <a class="footer__title" href="about.html">학원소개</a>
+          <ul>
+            <li><a class="footer__link" href="about.html#greeting">인사말</a></li>
+            <li><a class="footer__link" href="about.html#teachers">강사진</a></li>
+            <li><a class="footer__link" href="about.html#facility">시설안내</a></li>
+            <li><a class="footer__link" href="about.html#activity">주요활동</a></li>
+          </ul>
+        </li>
+        <li class="footer__group">
+          <a class="footer__title" href="lesson.html">레슨과정</a>
+          <ul>
+            <li><a class="footer__link" href="lesson.html#private">1:1 레슨</a></li>
+            <li><a class="footer__link" href="lesson.html#group">그룹레슨</a></li>
+            <li><a class="footer__link" href="lesson.html#oneday">원데이클래스</a></li>
+            <li><a class="footer__link" href="lesson.html#kids">초등레슨</a></li>
+            <li><a class="footer__link" href="lesson.html#adult">성인레슨</a></li>
+          </ul>
+        </li>
+        <li class="footer__group">
+          <a class="footer__title" href="admission.html">입시안내</a>
+          <ul>
+            <li><a class="footer__link" href="admission.html#lesson">입시레슨</a></li>
+            <li><a class="footer__link" href="admission.html#guide">입시요강·일정</a></li>
+            <li><a class="footer__link" href="admission.html#result">합격실적</a></li>
+          </ul>
+        </li>
+        <li class="footer__group">
+          <a class="footer__title" href="notice.html">공지사항</a>
+        </li>
+        <li class="footer__group">
+          <a class="footer__title" href="video.html">수업영상</a>
+        </li>
+        <li class="footer__group">
+          <a class="footer__title" href="location.html">오시는길</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div class="inner footer__bottom">
+    <p class="footer__copy">&copy; 2026 해향 해금학원. All rights reserved.</p>
+    <a class="footer__credit" href="credits.html">사진 출처 · Wikimedia Commons</a>
+  </div>
+</footer>
+
+<a class="floating-btn" href="contact.html">상담<br>신청</a>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 <script src="js/common.js"></script>
 </body>
 </html>

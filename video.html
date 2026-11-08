@@ -1,52 +1,217 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="utf-8">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>수업영상 | 해향 해금학원</title>
+<meta name="description" content="해향 해금학원의 레슨, 발표회 공연, 입시 모의실기 영상을 모았습니다.">
+<meta name="theme-color" content="#fcfbf8">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="해향 해금학원">
+<meta property="og:title" content="수업영상 | 해향 해금학원">
+<meta property="og:description" content="해향 해금학원의 레슨, 발표회 공연, 입시 모의실기 영상을 모았습니다.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Serif+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600&amp;display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/video.css">
+<noscript><link rel="stylesheet" href="css/noscript.css"></noscript>
 </head>
-<body data-page="video">
-<div id="header"></div>
-<main>
-  <div id="subtop"></div>
-  <section class="sec">
-    <div class="wrap">
-      <div class="filters" role="group" aria-label="영상 분류">
-        <button class="is-active" data-f="all">전체</button>
-        <button data-f="레슨">레슨</button>
-        <button data-f="공연">공연</button>
-        <button data-f="입시">입시</button>
+<body>
+<a class="skip-link" href="#main">본문 바로가기</a>
+
+<header class="header" id="header">
+  <div class="inner header__inner">
+    <a class="logo" href="index.html" aria-label="해향 해금학원 홈">
+      <span class="logo__mark" aria-hidden="true"></span>
+      <span class="logo__text"><span class="logo__name">해향</span><span class="logo__sub">HAEGEUM ACADEMY</span></span>
+    </a>
+    <nav class="gnb" id="gnb" aria-label="주 메뉴">
+      <ul class="gnb__list">
+        <li class="gnb__item">
+          <a class="gnb__link" href="about.html">학원소개</a>
+          <ul class="gnb__sub">
+            <li><a class="gnb__sub-link" href="about.html#greeting">인사말</a></li>
+            <li><a class="gnb__sub-link" href="about.html#teachers">강사진</a></li>
+            <li><a class="gnb__sub-link" href="about.html#facility">시설안내</a></li>
+            <li><a class="gnb__sub-link" href="about.html#activity">주요활동</a></li>
+          </ul>
+        </li>
+        <li class="gnb__item">
+          <a class="gnb__link" href="lesson.html">레슨과정</a>
+          <ul class="gnb__sub">
+            <li><a class="gnb__sub-link" href="lesson.html#private">1:1 레슨</a></li>
+            <li><a class="gnb__sub-link" href="lesson.html#group">그룹레슨</a></li>
+            <li><a class="gnb__sub-link" href="lesson.html#oneday">원데이클래스</a></li>
+            <li><a class="gnb__sub-link" href="lesson.html#kids">초등레슨</a></li>
+            <li><a class="gnb__sub-link" href="lesson.html#adult">성인레슨</a></li>
+          </ul>
+        </li>
+        <li class="gnb__item">
+          <a class="gnb__link" href="admission.html">입시안내</a>
+          <ul class="gnb__sub">
+            <li><a class="gnb__sub-link" href="admission.html#lesson">입시레슨</a></li>
+            <li><a class="gnb__sub-link" href="admission.html#guide">입시요강·일정</a></li>
+            <li><a class="gnb__sub-link" href="admission.html#result">합격실적</a></li>
+          </ul>
+        </li>
+        <li class="gnb__item">
+          <a class="gnb__link" href="notice.html">공지사항</a>
+        </li>
+        <li class="gnb__item">
+          <a class="gnb__link" href="video.html" aria-current="page">수업영상</a>
+        </li>
+        <li class="gnb__item">
+          <a class="gnb__link" href="location.html">오시는길</a>
+        </li>
+      </ul>
+      <div class="gnb__util">
+        <a class="btn btn--primary" href="contact.html">상담신청</a>
+        <a class="btn btn--outline" href="tel:02-000-0000">전화상담 02-000-0000</a>
       </div>
-      <div class="grid g-3" id="videos"></div>
+    </nav>
+    <a class="btn btn--primary btn--sm header__cta" href="contact.html">상담신청</a>
+    <button type="button" class="menu-btn" aria-controls="gnb" aria-expanded="false">
+      <span class="sr-only">전체 메뉴 열기</span>
+      <span class="menu-btn__line" aria-hidden="true"></span>
+      <span class="menu-btn__line" aria-hidden="true"></span>
+      <span class="menu-btn__line" aria-hidden="true"></span>
+    </button>
+  </div>
+</header>
+
+<main class="main" id="main">
+  <section class="sub-visual" aria-labelledby="page-title">
+    <div class="inner">
+      <div class="sub-visual__panel">
+        <div class="sub-visual__text" data-aos="fade-up">
+          <nav aria-label="현재 위치">
+            <ol class="breadcrumb">
+              <li class="breadcrumb__item"><a href="index.html">홈</a></li>
+              <li class="breadcrumb__item" aria-current="page">수업영상</li>
+            </ol>
+          </nav>
+          <h1 class="sub-visual__title" id="page-title">수업영상</h1>
+          <p class="sub-visual__desc">레슨과 공연 현장을 영상으로 만나보세요</p>
+        </div>
+        <div class="sub-visual__photo photo" data-aos="fade-left" data-aos-delay="150">
+          <img src="assets/img/photo-f190466059-960.jpg" srcset="assets/img/photo-f190466059-500.jpg 500w, assets/img/photo-f190466059-960.jpg 960w" sizes="(max-width: 1024px) 100vw, 460px" width="960" height="600" alt="해금·가야금·대금 삼중주 무대" fetchpriority="high" decoding="async">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="video-list-title">
+    <div class="inner">
+      <h2 class="sr-only" id="video-list-title">수업영상 목록</h2>
+      <div class="video-filter" data-aos="fade-up" role="group" aria-label="영상 분류">
+        <button type="button" class="video-filter__btn" data-filter="all" aria-pressed="true">전체</button>
+        <button type="button" class="video-filter__btn" data-filter="레슨" aria-pressed="false">레슨</button>
+        <button type="button" class="video-filter__btn" data-filter="공연" aria-pressed="false">공연</button>
+        <button type="button" class="video-filter__btn" data-filter="입시" aria-pressed="false">입시</button>
+      </div>
+      <!-- 유튜브 영상 연결 시: video-card__thumb 를 <a class="video-card__thumb" href="https://www.youtube.com/watch?v=영상ID"> 로 바꾸고 썸네일 이미지를 넣으세요 -->
+      <ul class="video-list" id="videoList">
+        <li class="video-card" data-aos="fade-up" data-category="레슨">
+          <div class="video-card__thumb"><span class="video-card__time">03:24</span></div>
+          <h3 class="video-card__title">성인 그룹레슨 – 아리랑</h3>
+          <p class="video-card__cat">레슨</p>
+        </li>
+        <li class="video-card" data-aos="fade-up" data-aos-delay="100" data-category="공연">
+          <div class="video-card__thumb"><span class="video-card__time">05:10</span></div>
+          <h3 class="video-card__title">2026 정기 발표회 하이라이트</h3>
+          <p class="video-card__cat">공연</p>
+        </li>
+        <li class="video-card" data-aos="fade-up" data-aos-delay="200" data-category="레슨">
+          <div class="video-card__thumb"><span class="video-card__time">02:15</span></div>
+          <h3 class="video-card__title">초등반 – 첫 활 긋기</h3>
+          <p class="video-card__cat">레슨</p>
+        </li>
+        <li class="video-card" data-aos="fade-up" data-category="입시">
+          <div class="video-card__thumb"><span class="video-card__time">06:40</span></div>
+          <h3 class="video-card__title">예고 입시 모의실기 – 산조</h3>
+          <p class="video-card__cat">입시</p>
+        </li>
+        <li class="video-card" data-aos="fade-up" data-aos-delay="100" data-category="공연">
+          <div class="video-card__thumb"><span class="video-card__time">03:02</span></div>
+          <h3 class="video-card__title">결혼식 축하연주 – 사랑의 인사</h3>
+          <p class="video-card__cat">공연</p>
+        </li>
+        <li class="video-card" data-aos="fade-up" data-aos-delay="200" data-category="레슨">
+          <div class="video-card__thumb"><span class="video-card__time">04:48</span></div>
+          <h3 class="video-card__title">1:1 레슨 – 운궁 교정 포인트</h3>
+          <p class="video-card__cat">레슨</p>
+        </li>
+      </ul>
     </div>
   </section>
 </main>
-<div id="footer"></div>
+
+<footer class="footer">
+  <div class="inner footer__inner">
+    <div class="footer__brand">
+      <a class="logo" href="index.html" aria-label="해향 해금학원 홈">
+        <span class="logo__mark" aria-hidden="true"></span>
+        <span class="logo__text"><span class="logo__name">해향</span><span class="logo__sub">HAEGEUM ACADEMY</span></span>
+      </a>
+      <address class="footer__address">
+        서울특별시 OO구 OO로 00, 3층<br>
+        TEL <a href="tel:02-000-0000">02-000-0000</a> · 평일 10:00–21:00 · 토 10:00–17:00
+      </address>
+    </div>
+    <nav class="footer__sitemap" aria-label="사이트맵">
+      <ul class="footer__sitemap-list">
+        <li class="footer__group">
+          <a class="footer__title" href="about.html">학원소개</a>
+          <ul>
+            <li><a class="footer__link" href="about.html#greeting">인사말</a></li>
+            <li><a class="footer__link" href="about.html#teachers">강사진</a></li>
+            <li><a class="footer__link" href="about.html#facility">시설안내</a></li>
+            <li><a class="footer__link" href="about.html#activity">주요활동</a></li>
+          </ul>
+        </li>
+        <li class="footer__group">
+          <a class="footer__title" href="lesson.html">레슨과정</a>
+          <ul>
+            <li><a class="footer__link" href="lesson.html#private">1:1 레슨</a></li>
+            <li><a class="footer__link" href="lesson.html#group">그룹레슨</a></li>
+            <li><a class="footer__link" href="lesson.html#oneday">원데이클래스</a></li>
+            <li><a class="footer__link" href="lesson.html#kids">초등레슨</a></li>
+            <li><a class="footer__link" href="lesson.html#adult">성인레슨</a></li>
+          </ul>
+        </li>
+        <li class="footer__group">
+          <a class="footer__title" href="admission.html">입시안내</a>
+          <ul>
+            <li><a class="footer__link" href="admission.html#lesson">입시레슨</a></li>
+            <li><a class="footer__link" href="admission.html#guide">입시요강·일정</a></li>
+            <li><a class="footer__link" href="admission.html#result">합격실적</a></li>
+          </ul>
+        </li>
+        <li class="footer__group">
+          <a class="footer__title" href="notice.html">공지사항</a>
+        </li>
+        <li class="footer__group">
+          <a class="footer__title" href="video.html">수업영상</a>
+        </li>
+        <li class="footer__group">
+          <a class="footer__title" href="location.html">오시는길</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div class="inner footer__bottom">
+    <p class="footer__copy">&copy; 2026 해향 해금학원. All rights reserved.</p>
+    <a class="footer__credit" href="credits.html">사진 출처 · Wikimedia Commons</a>
+  </div>
+</footer>
+
+<a class="floating-btn" href="contact.html">상담<br>신청</a>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 <script src="js/common.js"></script>
-<script>
-  // yt: 유튜브 영상 ID를 넣으면 썸네일 클릭 시 유튜브로 이동
-  const VIDEOS = [
-    { cat: '레슨', t: '성인 그룹레슨 – 아리랑', dur: '03:24', yt: '' },
-    { cat: '공연', t: '2026 정기 발표회 하이라이트', dur: '05:10', yt: '' },
-    { cat: '레슨', t: '초등반 – 첫 활 긋기', dur: '02:15', yt: '' },
-    { cat: '입시', t: '예고 입시 모의실기 – 산조', dur: '06:40', yt: '' },
-    { cat: '공연', t: '결혼식 축하연주 – 사랑의 인사', dur: '03:02', yt: '' },
-    { cat: '레슨', t: '1:1 레슨 – 운궁 교정 포인트', dur: '04:48', yt: '' },
-  ];
-  const box = document.getElementById('videos');
-  box.innerHTML = VIDEOS.map(v => `
-    <${v.yt ? `a href="https://www.youtube.com/watch?v=${v.yt}" target="_blank" rel="noopener"` : 'div'} class="v-card" data-cat="${v.cat}">
-      <div class="thumb"${v.yt ? ` style="background:url(https://i.ytimg.com/vi/${v.yt}/hqdefault.jpg) center/cover"` : ''}><span class="dur">${v.dur}</span></div>
-      <h3>${v.t}</h3><p>${v.cat}</p>
-    </${v.yt ? 'a' : 'div'}>`).join('');
-  document.querySelectorAll('.filters button').forEach(b => b.addEventListener('click', () => {
-    document.querySelectorAll('.filters button').forEach(x => x.classList.toggle('is-active', x === b));
-    box.querySelectorAll('.v-card').forEach(c => c.hidden = b.dataset.f !== 'all' && c.dataset.cat !== b.dataset.f);
-  }));
-</script>
+<script src="js/video.js"></script>
 </body>
 </html>

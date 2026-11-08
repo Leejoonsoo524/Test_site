@@ -1,0 +1,3 @@
+@charset "utf-8";
+/* JavaScript 가 꺼진 환경: 스크롤 등장 효과(AOS) 대상도 처음부터 보이게 합니다. */
+[data-aos] { opacity: 1 !important; transform: none !important; }

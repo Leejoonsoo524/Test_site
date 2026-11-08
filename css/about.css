@@ -1,0 +1,64 @@
+@charset "utf-8";
+/* =========================================================
+   about.html — 학원소개
+   순서: 서브비주얼 사진 위치 · 인사말 · 강사진 · 시설안내 · 주요활동
+   ========================================================= */
+
+.sub-visual__photo img { object-position: 75% 50%; }
+
+/* ---------- 인사말 ---------- */
+.greeting__inner { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 80px; }
+.greeting__photo { aspect-ratio: 5 / 4; }
+.greeting__desc { margin-top: 20px; color: var(--color-text); font-size: 17.5px; }
+.greeting__sign { margin-top: 28px; color: var(--color-text); font-family: var(--font-serif); }
+.greeting__sign strong { color: var(--color-ink); font-weight: 600; }
+
+/* ---------- 강사진 ---------- */
+.teacher-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.teacher-card { padding: 12px 12px 28px; }
+.teacher-card__photo { margin-bottom: 22px; border-radius: calc(var(--radius-lg) - 8px); }
+.teacher-card__name, .teacher-card__career { padding: 0 14px; }
+.teacher-card__name { font-size: 21px; }
+.teacher-card__career { margin-top: 8px; color: var(--color-muted); font-size: 15px; }
+
+/* ---------- 시설안내 ---------- */
+.facility-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.facility-item__title { margin-top: 16px; font-size: 18px; }
+
+/* ---------- 주요활동 ---------- */
+.activity-list { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+.activity-card { display: flex; flex-direction: column; padding: 12px 12px 28px; border: 1px solid var(--color-line); border-radius: var(--radius-lg); background: var(--color-white); box-shadow: var(--shadow-sm); }
+.activity-card__photo { aspect-ratio: 3 / 2; margin-bottom: 22px; border-radius: calc(var(--radius-lg) - 8px); }
+.activity-card--celebration .activity-card__photo img { object-position: 25% 50%; }
+.activity-card--rental .activity-card__photo img { object-position: 50% 20%; }
+.activity-card__title, .activity-card__desc { padding: 0 14px; }
+.activity-card__title { font-size: 21px; }
+.activity-card__desc { margin-top: 8px; color: var(--color-muted); font-size: 15px; }
+.activity-card__list { display: grid; gap: 4px; margin: 18px 14px 0; padding-top: 16px; border-top: 1px solid var(--color-line); color: var(--color-text); font-size: 14px; }
+.activity-card__list li::before { content: '· '; color: var(--color-point); }
+.activity-card:hover .activity-card__list li::before { color: var(--color-white); }
+.activity-note { margin-top: 40px; color: var(--color-muted); font-size: 15px; text-align: center; }
+.activity-note a { border-bottom: 1px solid currentColor; color: var(--color-point); font-weight: 700; }
+
+/* =========================================================
+   반응형
+   ========================================================= */
+@media (max-width: 1400px) {
+  .greeting__inner { gap: 64px; }
+}
+
+@media (max-width: 1200px) {
+  .greeting__inner { gap: 48px; }
+  .activity-list { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 1024px) {
+  .greeting__inner { grid-template-columns: 1fr; gap: 40px; }
+  .greeting__photo { aspect-ratio: 4 / 3; }
+  .teacher-list, .facility-list { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .greeting__desc { font-size: 16px; }
+  .teacher-list, .facility-list, .activity-list { grid-template-columns: 1fr; }
+}

@@ -1,87 +1,261 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="utf-8">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>학원소개 | 해향 해금학원</title>
+<meta name="description" content="해향 해금학원의 인사말, 강사진, 시설, 원장의 공연·특강 활동을 소개합니다.">
+<meta name="theme-color" content="#fcfbf8">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="해향 해금학원">
+<meta property="og:title" content="학원소개 | 해향 해금학원">
+<meta property="og:description" content="해향 해금학원의 인사말, 강사진, 시설, 원장의 공연·특강 활동을 소개합니다.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Serif+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600&amp;display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/about.css">
+<noscript><link rel="stylesheet" href="css/noscript.css"></noscript>
 </head>
-<body data-page="about">
-<div id="header"></div>
-<main>
-  <div id="subtop"></div>
+<body>
+<a class="skip-link" href="#main">본문 바로가기</a>
 
-  <section class="sec" id="greeting">
-    <div class="wrap feature">
-      <div class="ph reveal">원장 사진</div>
-      <div class="reveal">
-        <span class="eyebrow">GREETING</span>
-        <h2>바르게 배우면,<br>오래 즐길 수 있습니다</h2>
-        <p class="lead">해금은 두 줄로 수많은 감정을 표현하는 악기입니다. 처음에는 소리를 내는 것조차 어렵게 느껴질 수 있습니다. 해향은 기본 자세와 운궁부터 차근차근 짚어 드려, 누구나 자신만의 소리를 찾을 수 있도록 돕겠습니다.</p>
-        <p style="margin-top:24px;font-family:var(--serif)">해향 해금학원 원장 <b>OOO</b></p>
+<header class="header" id="header">
+  <div class="inner header__inner">
+    <a class="logo" href="index.html" aria-label="해향 해금학원 홈">
+      <span class="logo__mark" aria-hidden="true"></span>
+      <span class="logo__text"><span class="logo__name">해향</span><span class="logo__sub">HAEGEUM ACADEMY</span></span>
+    </a>
+    <nav class="gnb" id="gnb" aria-label="주 메뉴">
+      <ul class="gnb__list">
+        <li class="gnb__item">
+          <a class="gnb__link" href="about.html" aria-current="page">학원소개</a>
+          <ul class="gnb__sub">
+            <li><a class="gnb__sub-link" href="about.html#greeting">인사말</a></li>
+            <li><a class="gnb__sub-link" href="about.html#teachers">강사진</a></li>
+            <li><a class="gnb__sub-link" href="about.html#facility">시설안내</a></li>
+            <li><a class="gnb__sub-link" href="about.html#activity">주요활동</a></li>
+          </ul>
+        </li>
+        <li class="gnb__item">
+          <a class="gnb__link" href="lesson.html">레슨과정</a>
+          <ul class="gnb__sub">
+            <li><a class="gnb__sub-link" href="lesson.html#private">1:1 레슨</a></li>
+            <li><a class="gnb__sub-link" href="lesson.html#group">그룹레슨</a></li>
+            <li><a class="gnb__sub-link" href="lesson.html#oneday">원데이클래스</a></li>
+            <li><a class="gnb__sub-link" href="lesson.html#kids">초등레슨</a></li>
+            <li><a class="gnb__sub-link" href="lesson.html#adult">성인레슨</a></li>
+          </ul>
+        </li>
+        <li class="gnb__item">
+          <a class="gnb__link" href="admission.html">입시안내</a>
+          <ul class="gnb__sub">
+            <li><a class="gnb__sub-link" href="admission.html#lesson">입시레슨</a></li>
+            <li><a class="gnb__sub-link" href="admission.html#guide">입시요강·일정</a></li>
+            <li><a class="gnb__sub-link" href="admission.html#result">합격실적</a></li>
+          </ul>
+        </li>
+        <li class="gnb__item">
+          <a class="gnb__link" href="notice.html">공지사항</a>
+        </li>
+        <li class="gnb__item">
+          <a class="gnb__link" href="video.html">수업영상</a>
+        </li>
+        <li class="gnb__item">
+          <a class="gnb__link" href="location.html">오시는길</a>
+        </li>
+      </ul>
+      <div class="gnb__util">
+        <a class="btn btn--primary" href="contact.html">상담신청</a>
+        <a class="btn btn--outline" href="tel:02-000-0000">전화상담 02-000-0000</a>
+      </div>
+    </nav>
+    <a class="btn btn--primary btn--sm header__cta" href="contact.html">상담신청</a>
+    <button type="button" class="menu-btn" aria-controls="gnb" aria-expanded="false">
+      <span class="sr-only">전체 메뉴 열기</span>
+      <span class="menu-btn__line" aria-hidden="true"></span>
+      <span class="menu-btn__line" aria-hidden="true"></span>
+      <span class="menu-btn__line" aria-hidden="true"></span>
+    </button>
+  </div>
+</header>
+
+<main class="main" id="main">
+  <section class="sub-visual" aria-labelledby="page-title">
+    <div class="inner">
+      <div class="sub-visual__panel">
+        <div class="sub-visual__text" data-aos="fade-up">
+          <nav aria-label="현재 위치">
+            <ol class="breadcrumb">
+              <li class="breadcrumb__item"><a href="index.html">홈</a></li>
+              <li class="breadcrumb__item" aria-current="page">학원소개</li>
+            </ol>
+          </nav>
+          <h1 class="sub-visual__title" id="page-title">학원소개</h1>
+          <p class="sub-visual__desc">해금의 소리를 바르게, 오래 즐길 수 있도록</p>
+        </div>
+        <div class="sub-visual__photo photo" data-aos="fade-left" data-aos-delay="150">
+          <img src="assets/img/photo-f31716477-960.jpg" srcset="assets/img/photo-f31716477-500.jpg 500w, assets/img/photo-f31716477-960.jpg 960w" sizes="(max-width: 1024px) 100vw, 460px" width="960" height="640" alt="보면대 앞에서 국악기를 함께 연주하는 합주" fetchpriority="high" decoding="async">
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="sec sec-alt" id="teachers">
-    <div class="wrap">
-      <div class="sec-head reveal"><span class="eyebrow">TEACHERS</span><h2>강사진</h2><p>국악 전공 강사진이 수준별로 지도합니다.</p></div>
-      <div class="grid g-3 reveal">
-        <div class="card"><div class="ph" style="margin-bottom:20px">사진</div><h3>OOO 원장</h3><p>OO대학교 국악과 해금 전공<br>前 OO국악관현악단 단원</p></div>
-        <div class="card"><div class="ph" style="margin-bottom:20px">사진</div><h3>OOO 강사</h3><p>OO대학교 국악과 졸업<br>입시반 담당</p></div>
-        <div class="card"><div class="ph" style="margin-bottom:20px">사진</div><h3>OOO 강사</h3><p>OO예술고등학교 졸업<br>초등·그룹반 담당</p></div>
+  <nav class="lnb" aria-label="학원소개 하위 메뉴">
+    <div class="inner">
+      <ul class="lnb__list">
+        <li><a class="lnb__link" href="#greeting">인사말</a></li>
+        <li><a class="lnb__link" href="#teachers">강사진</a></li>
+        <li><a class="lnb__link" href="#facility">시설안내</a></li>
+        <li><a class="lnb__link" href="#activity">주요활동</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="section greeting" id="greeting" aria-labelledby="greeting-title">
+    <div class="inner greeting__inner">
+      <div class="greeting__photo placeholder" data-aos="fade-right">원장 사진</div>
+      <div class="greeting__text" data-aos="fade-left" data-aos-delay="150">
+        <p class="section-head__label">Greeting</p>
+        <h2 class="section-head__title" id="greeting-title">바르게 배우면,<br>오래 즐길 수 있습니다</h2>
+        <p class="greeting__desc">해금은 두 줄로 수많은 감정을 표현하는 악기입니다. 처음에는 소리를 내는 것조차 어렵게 느껴질 수 있습니다. 해향은 기본 자세와 운궁부터 차근차근 짚어 드려, 누구나 자신만의 소리를 찾을 수 있도록 돕겠습니다.</p>
+        <p class="greeting__sign">해향 해금학원 원장 <strong>OOO</strong></p>
       </div>
     </div>
   </section>
 
-  <section class="sec" id="facility">
-    <div class="wrap">
-      <div class="sec-head reveal"><span class="eyebrow">FACILITY</span><h2>시설안내</h2><p>방음 설계된 개인 레슨실과 합주실을 갖추고 있습니다.</p></div>
-      <div class="grid g-3 reveal">
-        <div><div class="ph">개인 레슨실</div><h3 style="margin-top:16px;font-size:18px">개인 레슨실 (4실)</h3></div>
-        <div><div class="ph">합주실</div><h3 style="margin-top:16px;font-size:18px">그룹 합주실</h3></div>
-        <div><div class="ph">대기 공간</div><h3 style="margin-top:16px;font-size:18px">라운지 · 대기 공간</h3></div>
+  <section class="section section--gray" id="teachers" aria-labelledby="teachers-title">
+    <div class="inner">
+      <div class="section-head" data-aos="fade-up">
+        <p class="section-head__label">Teachers</p>
+        <h2 class="section-head__title" id="teachers-title">강사진</h2>
+        <p class="section-head__desc">국악 전공 강사진이 수준별로 지도합니다.</p>
       </div>
+      <ul class="teacher-list">
+        <li class="teacher-card card hover-card" data-aos="fade-up"><div class="teacher-card__photo placeholder">사진</div><h3 class="teacher-card__name">OOO 원장</h3><p class="teacher-card__career">OO대학교 국악과 해금 전공<br>前 OO국악관현악단 단원</p></li>
+        <li class="teacher-card card hover-card" data-aos="fade-up"><div class="teacher-card__photo placeholder">사진</div><h3 class="teacher-card__name">OOO 강사</h3><p class="teacher-card__career">OO대학교 국악과 졸업<br>입시반 담당</p></li>
+        <li class="teacher-card card hover-card" data-aos="fade-up"><div class="teacher-card__photo placeholder">사진</div><h3 class="teacher-card__name">OOO 강사</h3><p class="teacher-card__career">OO예술고등학교 졸업<br>초등·그룹반 담당</p></li>
+      </ul>
     </div>
   </section>
 
-  <section class="sec sec-alt" id="activity">
-    <div class="wrap">
-      <div class="sec-head reveal"><span class="eyebrow">ACTIVITY</span><h2>주요활동</h2><p>해향의 원장은 레슨 외에도 무대와 현장에서 해금을 알리는 활동을 이어가고 있습니다.</p></div>
-      <div class="grid g-4 reveal">
-        <div class="card activity">
-          <div class="ph">공연 사진</div>
-          <h3>공연</h3>
-          <p>국악관현악단 협연, 지역 축제, 기관·기업 행사 무대에서 해금 독주와 앙상블 공연을 하고 있습니다.</p>
-          <ul><li>2026 OO문화재단 초청 공연</li><li>OO축제 국악 무대</li></ul>
-        </div>
-        <div class="card activity">
-          <div class="ph">축하연주 사진</div>
-          <h3>축하연주</h3>
-          <p>결혼식, 돌잔치, 고희연, 기념식처럼 특별한 날을 해금 선율로 함께합니다.</p>
-          <ul><li>웨딩 입장·축가 연주</li><li>가족 행사·기념식 연주</li></ul>
-        </div>
-        <div class="card activity">
-          <div class="ph">특강 사진</div>
-          <h3>특강·출강</h3>
-          <p>초·중학교 방과후 수업, 문화센터, 기관 단체를 대상으로 국악 체험 특강을 진행합니다.</p>
-          <ul><li>학교 국악 체험 수업</li><li>문화센터 해금 입문 강좌</li></ul>
-        </div>
-        <div class="card activity">
-          <div class="ph">악기 사진</div>
-          <h3>악기대여</h3>
-          <p>악기가 없어 시작을 망설이는 분들을 위해 입문용 해금을 대여해 드립니다.</p>
-          <ul><li>월 단위 대여</li><li>구매 시 악기 선택 도움</li></ul>
-        </div>
+  <section class="section" id="facility" aria-labelledby="facility-title">
+    <div class="inner">
+      <div class="section-head" data-aos="fade-up">
+        <p class="section-head__label">Facility</p>
+        <h2 class="section-head__title" id="facility-title">시설안내</h2>
+        <p class="section-head__desc">방음 설계된 개인 레슨실과 합주실을 갖추고 있습니다.</p>
       </div>
-      <p class="note-line reveal">관련 문의는 <a href="contact.html">상담신청</a>으로 남겨주시면 안내해 드립니다.</p>
+      <ul class="facility-list">
+        <li class="facility-item" data-aos="fade-up"><div class="placeholder">개인 레슨실</div><h3 class="facility-item__title">개인 레슨실 (4실)</h3></li>
+        <li class="facility-item" data-aos="fade-up" data-aos-delay="100"><div class="placeholder">합주실</div><h3 class="facility-item__title">그룹 합주실</h3></li>
+        <li class="facility-item" data-aos="fade-up" data-aos-delay="200"><div class="placeholder">대기 공간</div><h3 class="facility-item__title">라운지 · 대기 공간</h3></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section--gray" id="activity" aria-labelledby="activity-title">
+    <div class="inner">
+      <div class="section-head" data-aos="fade-up">
+        <p class="section-head__label">Activity</p>
+        <h2 class="section-head__title" id="activity-title">주요활동</h2>
+        <p class="section-head__desc">해향의 원장은 레슨 외에도 무대와 현장에서 해금을 알리는 활동을 이어가고 있습니다.</p>
+      </div>
+      <ul class="activity-list">
+        <li class="hover-card activity-card activity-card--stage" data-aos="fade-up">
+          <div class="activity-card__photo photo"><img src="assets/img/photo-f190465975-960.jpg" srcset="assets/img/photo-f190465975-500.jpg 500w, assets/img/photo-f190465975-960.jpg 960w" sizes="(max-width: 768px) 100vw, 300px" width="960" height="600" alt="국악 합주 무대" loading="lazy" decoding="async"></div>
+          <h3 class="activity-card__title">공연</h3>
+          <p class="activity-card__desc">국악관현악단 협연, 지역 축제, 기관·기업 행사 무대에서 해금 독주와 앙상블 공연을 하고 있습니다.</p>
+          <ul class="activity-card__list"><li>2026 OO문화재단 초청 공연</li><li>OO축제 국악 무대</li></ul>
+        </li>
+        <li class="hover-card activity-card activity-card--celebration" data-aos="fade-up">
+          <div class="activity-card__photo photo"><img src="assets/img/photo-f190466059-960.jpg" srcset="assets/img/photo-f190466059-500.jpg 500w, assets/img/photo-f190466059-960.jpg 960w" sizes="(max-width: 768px) 100vw, 300px" width="960" height="600" alt="해금·가야금·대금 삼중주 무대" loading="lazy" decoding="async"></div>
+          <h3 class="activity-card__title">축하연주</h3>
+          <p class="activity-card__desc">결혼식, 돌잔치, 고희연, 기념식처럼 특별한 날을 해금 선율로 함께합니다.</p>
+          <ul class="activity-card__list"><li>웨딩 입장·축가 연주</li><li>가족 행사·기념식 연주</li></ul>
+        </li>
+        <li class="hover-card activity-card" data-aos="fade-up">
+          <div class="activity-card__photo placeholder">특강 사진</div>
+          <h3 class="activity-card__title">특강·출강</h3>
+          <p class="activity-card__desc">초·중학교 방과후 수업, 문화센터, 기관 단체를 대상으로 국악 체험 특강을 진행합니다.</p>
+          <ul class="activity-card__list"><li>학교 국악 체험 수업</li><li>문화센터 해금 입문 강좌</li></ul>
+        </li>
+        <li class="hover-card activity-card activity-card--rental" data-aos="fade-up">
+          <div class="activity-card__photo photo"><img src="assets/img/photo-f30235135-960.jpg" srcset="assets/img/photo-f30235135-500.jpg 500w, assets/img/photo-f30235135-960.jpg 960w" sizes="(max-width: 768px) 100vw, 300px" width="960" height="1442" alt="활과 함께 세워 둔 해금" loading="lazy" decoding="async"></div>
+          <h3 class="activity-card__title">악기대여</h3>
+          <p class="activity-card__desc">악기가 없어 시작을 망설이는 분들을 위해 입문용 해금을 대여해 드립니다.</p>
+          <ul class="activity-card__list"><li>월 단위 대여</li><li>구매 시 악기 선택 도움</li></ul>
+        </li>
+      </ul>
+      <p class="activity-note" data-aos="fade-up">관련 문의는 <a href="contact.html">상담신청</a>으로 남겨주시면 안내해 드립니다.</p>
     </div>
   </section>
 </main>
-<div id="footer"></div>
+
+<footer class="footer">
+  <div class="inner footer__inner">
+    <div class="footer__brand">
+      <a class="logo" href="index.html" aria-label="해향 해금학원 홈">
+        <span class="logo__mark" aria-hidden="true"></span>
+        <span class="logo__text"><span class="logo__name">해향</span><span class="logo__sub">HAEGEUM ACADEMY</span></span>
+      </a>
+      <address class="footer__address">
+        서울특별시 OO구 OO로 00, 3층<br>
+        TEL <a href="tel:02-000-0000">02-000-0000</a> · 평일 10:00–21:00 · 토 10:00–17:00
+      </address>
+    </div>
+    <nav class="footer__sitemap" aria-label="사이트맵">
+      <ul class="footer__sitemap-list">
+        <li class="footer__group">
+          <a class="footer__title" href="about.html">학원소개</a>
+          <ul>
+            <li><a class="footer__link" href="about.html#greeting">인사말</a></li>
+            <li><a class="footer__link" href="about.html#teachers">강사진</a></li>
+            <li><a class="footer__link" href="about.html#facility">시설안내</a></li>
+            <li><a class="footer__link" href="about.html#activity">주요활동</a></li>
+          </ul>
+        </li>
+        <li class="footer__group">
+          <a class="footer__title" href="lesson.html">레슨과정</a>
+          <ul>
+            <li><a class="footer__link" href="lesson.html#private">1:1 레슨</a></li>
+            <li><a class="footer__link" href="lesson.html#group">그룹레슨</a></li>
+            <li><a class="footer__link" href="lesson.html#oneday">원데이클래스</a></li>
+            <li><a class="footer__link" href="lesson.html#kids">초등레슨</a></li>
+            <li><a class="footer__link" href="lesson.html#adult">성인레슨</a></li>
+          </ul>
+        </li>
+        <li class="footer__group">
+          <a class="footer__title" href="admission.html">입시안내</a>
+          <ul>
+            <li><a class="footer__link" href="admission.html#lesson">입시레슨</a></li>
+            <li><a class="footer__link" href="admission.html#guide">입시요강·일정</a></li>
+            <li><a class="footer__link" href="admission.html#result">합격실적</a></li>
+          </ul>
+        </li>
+        <li class="footer__group">
+          <a class="footer__title" href="notice.html">공지사항</a>
+        </li>
+        <li class="footer__group">
+          <a class="footer__title" href="video.html">수업영상</a>
+        </li>
+        <li class="footer__group">
+          <a class="footer__title" href="location.html">오시는길</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div class="inner footer__bottom">
+    <p class="footer__copy">&copy; 2026 해향 해금학원. All rights reserved.</p>
+    <a class="footer__credit" href="credits.html">사진 출처 · Wikimedia Commons</a>
+  </div>
+</footer>
+
+<a class="floating-btn" href="contact.html">상담<br>신청</a>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 <script src="js/common.js"></script>
 </body>
 </html>

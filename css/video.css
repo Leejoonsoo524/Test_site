@@ -1,0 +1,43 @@
+@charset "utf-8";
+/* =========================================================
+   video.html — 수업영상
+   순서: 분류 필터 · 영상 카드 목록
+   ========================================================= */
+
+/* ---------- 분류 필터 ---------- */
+.video-filter { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 36px; }
+.video-filter__btn { min-height: 44px; padding: 0 22px; border: 1px solid var(--color-line-strong); border-radius: var(--radius-full); background: var(--color-white); color: var(--color-text); font-size: 15px; font-weight: 600; transition: border-color .2s, background-color .2s, color .2s; }
+.video-filter__btn:hover, .video-filter__btn[aria-pressed='true'] { border-color: var(--color-point); background: var(--color-point); color: var(--color-white); }
+
+/* ---------- 영상 카드 ---------- */
+.video-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px 24px; }
+.video-card[hidden] { display: none; }
+.video-card__thumb { position: relative; display: grid; place-items: center; aspect-ratio: 16 / 9; overflow: hidden; border-radius: var(--radius-md); background: linear-gradient(135deg, #f3e6df, #efe3d3 55%, #e8d6c9) center / cover no-repeat; }
+.video-card__thumb::before { content: ''; width: 60px; height: 60px; border-radius: 50%; background: var(--color-white); box-shadow: var(--shadow-sm); transition: background-color .3s, transform .3s var(--ease); }
+.video-card__thumb::after { content: ''; position: absolute; margin-left: 5px; border-top: 9px solid transparent; border-bottom: 9px solid transparent; border-left: 15px solid var(--color-point); transition: border-color .3s; }
+.video-card:hover .video-card__thumb::before { background: var(--color-point); transform: scale(1.06); }
+.video-card:hover .video-card__thumb::after { border-left-color: var(--color-white); }
+.video-card__time { position: absolute; right: 12px; bottom: 12px; padding: 2px 8px; border-radius: var(--radius-full); background: rgba(27, 24, 21, .6); color: var(--color-white); font-size: 12px; font-variant-numeric: tabular-nums; }
+.video-card__title { margin-top: 16px; font-size: 16.5px; font-weight: 600; letter-spacing: -0.02em; transition: color .2s; }
+.video-card:hover .video-card__title { color: var(--color-point); }
+.video-card__cat { margin-top: 2px; color: var(--color-muted); font-size: 13.5px; }
+
+/* =========================================================
+   반응형
+   ========================================================= */
+@media (max-width: 1400px) {
+  .video-list { gap: 36px 20px; }
+}
+
+@media (max-width: 1200px) {
+  .video-filter { margin-bottom: 32px; }
+}
+
+@media (max-width: 1024px) {
+  .video-list { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .video-list { grid-template-columns: 1fr; gap: 32px; }
+  .video-filter__btn { padding: 0 18px; }
+}

@@ -1,0 +1,60 @@
+@charset "utf-8";
+/* =========================================================
+   admission.html — 입시안내
+   순서: 서브비주얼 사진 위치 · 입시레슨(단계·반) · 입시요강 표 · 합격실적
+   ========================================================= */
+
+.sub-visual__photo img { object-position: 20% 40%; }
+
+/* ---------- 입시레슨 단계 ---------- */
+.process-list { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; counter-reset: process; }
+.process-list__item { padding: 28px 24px; border: 1px solid var(--color-line); border-radius: var(--radius-lg); background: var(--color-white); box-shadow: var(--shadow-sm); }
+.process-list__item::before { content: 'STEP 0' counter(process); counter-increment: process; display: block; margin-bottom: 28px; color: var(--color-point); font-size: 12.5px; font-weight: 700; letter-spacing: .1em; }
+.process-list__item:hover::before { color: var(--color-white); }
+.process-list__title { display: block; margin-bottom: 6px; font-size: 19px; letter-spacing: -0.03em; }
+.process-list__desc { color: var(--color-muted); font-size: 15px; }
+
+/* 입시반 */
+.class-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 64px; }
+.class-card .badge { margin-bottom: 18px; }
+.class-card__title { margin-bottom: 8px; font-size: 21px; }
+.class-card__desc { color: var(--color-muted); font-size: 15px; }
+
+/* ---------- 입시요강 표 ---------- */
+.table-wrap { overflow-x: auto; border: 1px solid var(--color-line); border-radius: var(--radius-lg); background: var(--color-white); box-shadow: var(--shadow-sm); }
+.schedule-table { width: 100%; min-width: 560px; font-size: 15px; }
+.schedule-table th, .schedule-table td { padding: 18px 24px; border-bottom: 1px solid var(--color-line); text-align: left; }
+.schedule-table thead th { background: var(--color-bg-gray); color: var(--color-text); font-size: 14px; font-weight: 700; }
+.schedule-table tbody th { font-weight: 600; }
+.schedule-table tbody tr:last-child th, .schedule-table tbody tr:last-child td { border-bottom: 0; }
+
+/* ---------- 합격실적 ---------- */
+.result-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.result-card { padding: 44px 20px; text-align: center; }
+.result-card__num { display: block; color: var(--color-point); font-family: var(--font-serif); font-size: 52px; font-weight: 500; line-height: 1.2; }
+.result-card__label { color: var(--color-muted); font-size: 15px; }
+.result-action { margin-top: 48px; text-align: center; }
+
+/* =========================================================
+   반응형
+   ========================================================= */
+@media (max-width: 1400px) {
+  .process-list__item { padding: 26px 22px; }
+}
+
+@media (max-width: 1200px) {
+  .class-list { margin-top: 48px; }
+  .result-card__num { font-size: 46px; }
+}
+
+@media (max-width: 1024px) {
+  .process-list { grid-template-columns: repeat(2, 1fr); }
+  .class-list, .result-list { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .process-list, .class-list, .result-list { grid-template-columns: 1fr; }
+  .schedule-table th, .schedule-table td { padding: 14px 16px; }
+  .result-card { padding: 32px 20px; }
+  .result-action .btn { width: 100%; }
+}

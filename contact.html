@@ -1,28 +1,117 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="utf-8">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>상담신청 | 해향 해금학원</title>
+<meta name="description" content="레슨·입시 상담부터 공연·축하연주·특강·악기대여 문의까지 상담신청서를 남겨주세요.">
+<meta name="theme-color" content="#fcfbf8">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="해향 해금학원">
+<meta property="og:title" content="상담신청 | 해향 해금학원">
+<meta property="og:description" content="레슨·입시 상담부터 공연·축하연주·특강·악기대여 문의까지 상담신청서를 남겨주세요.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Serif+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600&amp;display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/contact.css">
+<noscript><link rel="stylesheet" href="css/noscript.css"></noscript>
 </head>
-<body data-page="contact">
-<div id="header"></div>
-<main>
-  <div id="subtop"></div>
+<body>
+<a class="skip-link" href="#main">본문 바로가기</a>
 
-  <section class="sec" id="form">
-    <div class="wrap consult-layout">
-      <aside class="consult-side reveal">
-        <span class="eyebrow">CONSULT</span>
-        <h2>편하게 문의하세요</h2>
-        <p style="color:var(--muted)">전화 상담</p>
-        <a class="tel" href="tel:02-000-0000">02-000-0000</a>
-        <p style="color:var(--muted);font-size:14px">평일 10:00–21:00 · 토 10:00–17:00</p>
-        <ol class="steps">
+<header class="header" id="header">
+  <div class="inner header__inner">
+    <a class="logo" href="index.html" aria-label="해향 해금학원 홈">
+      <span class="logo__mark" aria-hidden="true"></span>
+      <span class="logo__text"><span class="logo__name">해향</span><span class="logo__sub">HAEGEUM ACADEMY</span></span>
+    </a>
+    <nav class="gnb" id="gnb" aria-label="주 메뉴">
+      <ul class="gnb__list">
+        <li class="gnb__item">
+          <a class="gnb__link" href="about.html">학원소개</a>
+          <ul class="gnb__sub">
+            <li><a class="gnb__sub-link" href="about.html#greeting">인사말</a></li>
+            <li><a class="gnb__sub-link" href="about.html#teachers">강사진</a></li>
+            <li><a class="gnb__sub-link" href="about.html#facility">시설안내</a></li>
+            <li><a class="gnb__sub-link" href="about.html#activity">주요활동</a></li>
+          </ul>
+        </li>
+        <li class="gnb__item">
+          <a class="gnb__link" href="lesson.html">레슨과정</a>
+          <ul class="gnb__sub">
+            <li><a class="gnb__sub-link" href="lesson.html#private">1:1 레슨</a></li>
+            <li><a class="gnb__sub-link" href="lesson.html#group">그룹레슨</a></li>
+            <li><a class="gnb__sub-link" href="lesson.html#oneday">원데이클래스</a></li>
+            <li><a class="gnb__sub-link" href="lesson.html#kids">초등레슨</a></li>
+            <li><a class="gnb__sub-link" href="lesson.html#adult">성인레슨</a></li>
+          </ul>
+        </li>
+        <li class="gnb__item">
+          <a class="gnb__link" href="admission.html">입시안내</a>
+          <ul class="gnb__sub">
+            <li><a class="gnb__sub-link" href="admission.html#lesson">입시레슨</a></li>
+            <li><a class="gnb__sub-link" href="admission.html#guide">입시요강·일정</a></li>
+            <li><a class="gnb__sub-link" href="admission.html#result">합격실적</a></li>
+          </ul>
+        </li>
+        <li class="gnb__item">
+          <a class="gnb__link" href="notice.html">공지사항</a>
+        </li>
+        <li class="gnb__item">
+          <a class="gnb__link" href="video.html">수업영상</a>
+        </li>
+        <li class="gnb__item">
+          <a class="gnb__link" href="location.html">오시는길</a>
+        </li>
+      </ul>
+      <div class="gnb__util">
+        <a class="btn btn--primary" href="contact.html">상담신청</a>
+        <a class="btn btn--outline" href="tel:02-000-0000">전화상담 02-000-0000</a>
+      </div>
+    </nav>
+    <a class="btn btn--primary btn--sm header__cta" href="contact.html" aria-current="page">상담신청</a>
+    <button type="button" class="menu-btn" aria-controls="gnb" aria-expanded="false">
+      <span class="sr-only">전체 메뉴 열기</span>
+      <span class="menu-btn__line" aria-hidden="true"></span>
+      <span class="menu-btn__line" aria-hidden="true"></span>
+      <span class="menu-btn__line" aria-hidden="true"></span>
+    </button>
+  </div>
+</header>
+
+<main class="main" id="main">
+  <section class="sub-visual" aria-labelledby="page-title">
+    <div class="inner">
+      <div class="sub-visual__panel">
+        <div class="sub-visual__text" data-aos="fade-up">
+          <nav aria-label="현재 위치">
+            <ol class="breadcrumb">
+              <li class="breadcrumb__item"><a href="index.html">홈</a></li>
+              <li class="breadcrumb__item" aria-current="page">상담신청</li>
+            </ol>
+          </nav>
+          <h1 class="sub-visual__title" id="page-title">상담신청</h1>
+          <p class="sub-visual__desc">레슨·입시 상담부터 공연·특강 문의까지 편하게 남겨주세요</p>
+        </div>
+        <div class="sub-visual__photo photo" data-aos="fade-left" data-aos-delay="150">
+          <img src="assets/img/photo-f39232562-960.jpg" srcset="assets/img/photo-f39232562-500.jpg 500w, assets/img/photo-f39232562-960.jpg 960w" sizes="(max-width: 1024px) 100vw, 460px" width="960" height="720" alt="한복을 입고 해금을 연주하는 모습" fetchpriority="high" decoding="async">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section consult" id="form" aria-label="상담 신청">
+    <div class="inner consult__inner">
+      <aside class="consult-side" data-aos="fade-right" aria-labelledby="consult-title">
+        <p class="section-head__label">Consult</p>
+        <h2 class="consult-side__title" id="consult-title">편하게 문의하세요</h2>
+        <p class="consult-side__label">전화 상담</p>
+        <a class="consult-side__tel" href="tel:02-000-0000">02-000-0000</a>
+        <p class="consult-side__hours">평일 10:00–21:00 · 토 10:00–17:00</p>
+        <ol class="consult-side__steps">
           <li>상담신청서 작성</li>
           <li>담당 선생님 연락 (영업일 1일 이내)</li>
           <li>방문 상담 · 레벨 진단</li>
@@ -30,43 +119,120 @@
         </ol>
       </aside>
 
-      <form class="form reveal" id="inquiryForm" novalidate>
-        <div class="field"><label for="f-type">상담 분야 <i>*</i></label>
-          <select id="f-type" name="type" required>
-            <option value="">선택하세요</option>
-            <option>레슨 상담</option>
-            <option>입시 상담</option>
-            <option>원데이클래스</option>
-            <option>공연·축하연주</option>
-            <option>특강·출강</option>
-            <option>악기대여</option>
-            <option>기타</option>
-          </select>
+      <form class="consult-form" data-aos="fade-left" data-aos-delay="150" id="consultForm" action="#" method="post" novalidate>
+        <fieldset class="consult-form__fieldset">
+          <legend class="sr-only">상담신청서</legend>
+          <p class="consult-form__guide"><span class="consult-form__required" aria-hidden="true">*</span> 표시는 필수 입력 항목입니다.</p>
+          <div class="field">
+            <label class="field__label" for="fieldType">상담 분야 <span class="consult-form__required" aria-hidden="true">*</span></label>
+            <select class="field__control" id="fieldType" name="type" required>
+              <option value="">선택하세요</option>
+              <option>레슨 상담</option>
+              <option>입시 상담</option>
+              <option>원데이클래스</option>
+              <option>공연·축하연주</option>
+              <option>특강·출강</option>
+              <option>악기대여</option>
+              <option>기타</option>
+            </select>
+          </div>
+          <div class="field">
+            <label class="field__label" for="fieldName">이름 <span class="consult-form__required" aria-hidden="true">*</span></label>
+            <input class="field__control" type="text" id="fieldName" name="name" required autocomplete="name">
+          </div>
+          <div class="field">
+            <label class="field__label" for="fieldTel">연락처 <span class="consult-form__required" aria-hidden="true">*</span></label>
+            <input class="field__control" type="tel" id="fieldTel" name="tel" required autocomplete="tel" placeholder="010-0000-0000">
+          </div>
+          <div class="field">
+            <label class="field__label" for="fieldTime">연락 가능 시간</label>
+            <select class="field__control" id="fieldTime" name="time">
+              <option>무관</option>
+              <option>오전 (10–12시)</option>
+              <option>오후 (12–18시)</option>
+              <option>저녁 (18–21시)</option>
+            </select>
+          </div>
+          <div class="field field--full">
+            <label class="field__label" for="fieldMessage">상담 내용 <span class="consult-form__required" aria-hidden="true">*</span></label>
+            <textarea class="field__control field__control--textarea" id="fieldMessage" name="message" required aria-describedby="fieldMessageHelp"></textarea>
+            <p class="field__help" id="fieldMessageHelp">수강 대상(초등/성인 등), 해금 경험 유무, 희망 요일·시간대를 적어주세요. 공연·특강은 일시와 장소를 함께 적어주세요.</p>
+          </div>
+          <div class="field field--full field--check">
+            <input class="field__check" type="checkbox" id="fieldAgree" name="agree" required>
+            <label for="fieldAgree">개인정보 수집·이용에 동의합니다. (필수)</label>
+          </div>
+        </fieldset>
+        <div class="consult-form__foot">
+          <p class="consult-form__msg" id="formMsg" role="status" aria-live="polite"></p>
+          <button type="submit" class="btn btn--primary">상담 신청하기 <span class="btn__icon" aria-hidden="true">→</span></button>
         </div>
-        <div class="field"><label for="f-name">이름 <i>*</i></label><input id="f-name" name="name" required autocomplete="name"></div>
-        <div class="field"><label for="f-tel">연락처 <i>*</i></label><input id="f-tel" name="tel" type="tel" required placeholder="010-0000-0000" autocomplete="tel"></div>
-        <div class="field"><label for="f-time">연락 가능 시간</label>
-          <select id="f-time" name="time"><option>무관</option><option>오전 (10–12시)</option><option>오후 (12–18시)</option><option>저녁 (18–21시)</option></select>
-        </div>
-        <div class="field full"><label for="f-msg">상담 내용 <i>*</i></label><textarea id="f-msg" name="message" required placeholder="수강 대상(초등/성인 등), 해금 경험 유무, 희망 요일·시간대를 적어주세요. 공연·특강은 일시와 장소를 함께 적어주세요."></textarea></div>
-        <label class="agree"><input type="checkbox" required id="f-agree"> 개인정보 수집·이용에 동의합니다. (필수)</label>
-        <div class="form-foot"><span class="form-msg" id="formMsg" role="status" aria-live="polite"></span><button class="btn btn-ink" type="submit">상담 신청하기</button></div>
       </form>
     </div>
   </section>
 </main>
-<div id="footer"></div>
+
+<footer class="footer">
+  <div class="inner footer__inner">
+    <div class="footer__brand">
+      <a class="logo" href="index.html" aria-label="해향 해금학원 홈">
+        <span class="logo__mark" aria-hidden="true"></span>
+        <span class="logo__text"><span class="logo__name">해향</span><span class="logo__sub">HAEGEUM ACADEMY</span></span>
+      </a>
+      <address class="footer__address">
+        서울특별시 OO구 OO로 00, 3층<br>
+        TEL <a href="tel:02-000-0000">02-000-0000</a> · 평일 10:00–21:00 · 토 10:00–17:00
+      </address>
+    </div>
+    <nav class="footer__sitemap" aria-label="사이트맵">
+      <ul class="footer__sitemap-list">
+        <li class="footer__group">
+          <a class="footer__title" href="about.html">학원소개</a>
+          <ul>
+            <li><a class="footer__link" href="about.html#greeting">인사말</a></li>
+            <li><a class="footer__link" href="about.html#teachers">강사진</a></li>
+            <li><a class="footer__link" href="about.html#facility">시설안내</a></li>
+            <li><a class="footer__link" href="about.html#activity">주요활동</a></li>
+          </ul>
+        </li>
+        <li class="footer__group">
+          <a class="footer__title" href="lesson.html">레슨과정</a>
+          <ul>
+            <li><a class="footer__link" href="lesson.html#private">1:1 레슨</a></li>
+            <li><a class="footer__link" href="lesson.html#group">그룹레슨</a></li>
+            <li><a class="footer__link" href="lesson.html#oneday">원데이클래스</a></li>
+            <li><a class="footer__link" href="lesson.html#kids">초등레슨</a></li>
+            <li><a class="footer__link" href="lesson.html#adult">성인레슨</a></li>
+          </ul>
+        </li>
+        <li class="footer__group">
+          <a class="footer__title" href="admission.html">입시안내</a>
+          <ul>
+            <li><a class="footer__link" href="admission.html#lesson">입시레슨</a></li>
+            <li><a class="footer__link" href="admission.html#guide">입시요강·일정</a></li>
+            <li><a class="footer__link" href="admission.html#result">합격실적</a></li>
+          </ul>
+        </li>
+        <li class="footer__group">
+          <a class="footer__title" href="notice.html">공지사항</a>
+        </li>
+        <li class="footer__group">
+          <a class="footer__title" href="video.html">수업영상</a>
+        </li>
+        <li class="footer__group">
+          <a class="footer__title" href="location.html">오시는길</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div class="inner footer__bottom">
+    <p class="footer__copy">&copy; 2026 해향 해금학원. All rights reserved.</p>
+    <a class="footer__credit" href="credits.html">사진 출처 · Wikimedia Commons</a>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 <script src="js/common.js"></script>
-<script>
-  document.getElementById('inquiryForm').addEventListener('submit', e => {
-    e.preventDefault();
-    const f = e.target, msg = document.getElementById('formMsg');
-    const bad = [...f.querySelectorAll('[required]')].find(el => el.type === 'checkbox' ? !el.checked : !el.value.trim());
-    if (bad) { msg.style.color = 'var(--accent)'; msg.textContent = '필수 항목을 확인해 주세요.'; bad.focus(); return; }
-    // TODO: 실제 전송(이메일/폼 서비스/백엔드) 연결
-    msg.style.color = ''; msg.textContent = '상담 신청이 접수되었습니다. (데모: 전송 기능 미연결)';
-    f.reset();
-  });
-</script>
+<script src="js/contact.js"></script>
 </body>
 </html>

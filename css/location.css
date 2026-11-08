@@ -1,0 +1,35 @@
+@charset "utf-8";
+/* =========================================================
+   location.html — 오시는길
+   순서: 지도 영역 · 학원 정보 / 교통편 카드
+   ========================================================= */
+
+/* ---------- 지도 영역 (지도 API 삽입 위치) ---------- */
+.map-area { display: grid; place-items: center; aspect-ratio: 21 / 9; min-height: 280px; overflow: hidden; border-radius: var(--radius-lg); background: radial-gradient(circle at 50% 50%, rgba(176, 52, 43, .08), transparent 40%), repeating-linear-gradient(0deg, transparent 0 47px, var(--color-line) 47px 48px), repeating-linear-gradient(90deg, transparent 0 47px, var(--color-line) 47px 48px), var(--color-bg-gray); color: var(--color-muted); font-size: 14px; text-align: center; }
+.map-area__text::before { content: ''; display: block; width: 24px; height: 24px; margin: 0 auto 14px; border-radius: 50% 50% 50% 0; background: var(--color-point); box-shadow: 0 0 0 10px rgba(176, 52, 43, .12); transform: rotate(-45deg); }
+
+/* ---------- 정보 카드 ---------- */
+.location__info { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 24px; }
+.info-card { padding: 36px; border: 1px solid var(--color-line); border-radius: var(--radius-lg); background: var(--color-white); box-shadow: var(--shadow-sm); }
+.info-card__title { margin-bottom: 24px; font-size: 20px; }
+
+/* =========================================================
+   반응형
+   ========================================================= */
+@media (max-width: 1400px) {
+  .info-card { padding: 34px; }
+}
+
+@media (max-width: 1200px) {
+  .map-area { aspect-ratio: 2 / 1; }
+}
+
+@media (max-width: 1024px) {
+  .map-area { aspect-ratio: 16 / 9; }
+  .location__info { grid-template-columns: 1fr; gap: 20px; }
+}
+
+@media (max-width: 768px) {
+  .map-area { aspect-ratio: 4 / 3; min-height: 0; }
+  .info-card { padding: 28px 22px; }
+}
