@@ -50,4 +50,3 @@
 - 클래스 이름: BEM 방식 (`블록__요소--변형`)
 - 호버 규칙: 버튼은 마우스를 올리면 빨간색(`.btn--outline`), 카드·목록은 `.hover-card` 클래스를 붙이면 배경 전체 빨간색 + 흰 글자로 바뀝니다. 검은색은 글자색으로만 씁니다.
 - 스크롤 등장 효과: AOS 2.3.4 (cdnjs). 요소에 `data-aos="fade-up"` 등을 붙이고 `data-aos-delay`로 순서를 줍니다. 초기화는 js/common.js, JS가 꺼진 환경은 css/noscript.css 로 보이게 처리합니다.
-- index-video.html: index.html 복사본에서 메인 비주얼을 한 화면 가득 동영상(문구 없음)으로 바꾼 버전 (css/index-video.css · js/index-video.js 추가 연결). 학원 영상은 assets/video/hero.mp4 로 넣고 source 를 교체합니다.

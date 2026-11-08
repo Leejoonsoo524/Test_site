@@ -129,8 +129,13 @@ a.photo:hover img, a:hover > .photo img { transform: scale(1.03); }
 .info-list__desc a:hover { color: var(--color-point); }
 
 /* ---------- 8. 헤더 · GNB ---------- */
-.header { position: fixed; top: 0; right: 0; left: 0; z-index: 100; height: var(--header-height); border-bottom: 1px solid transparent; background: rgba(252, 251, 248, .88); backdrop-filter: saturate(1.4) blur(14px); transition: border-color .3s, background-color .3s; }
-.header.is-scrolled { border-bottom-color: var(--color-line); background: rgba(252, 251, 248, .96); }
+.header { position: fixed; top: 0; right: 0; left: 0; z-index: 100; height: var(--header-height); border-bottom: 1px solid transparent; transition: border-color .3s; }
+/* 흐림 배경은 가상 요소에 둡니다. 헤더 자체에 backdrop-filter 를 주면 안쪽 fixed 메뉴(.gnb)가 헤더 크기에 갇힙니다. */
+.header::before { content: ''; position: absolute; inset: 0; z-index: -1; background: rgba(252, 251, 248, .88); backdrop-filter: saturate(1.4) blur(14px); transition: background-color .3s; }
+.header.is-scrolled { border-bottom-color: var(--color-line); }
+.header.is-scrolled::before { background: rgba(252, 251, 248, .96); }
+.is-menu-open .header { border-bottom-color: var(--color-line); }
+.is-menu-open .header::before { background: var(--color-bg); }
 .header__inner { display: flex; align-items: center; gap: 24px; height: 100%; }
 .header__cta { margin-left: 8px; }
 .header__cta[aria-current='page'] { border-color: var(--color-point-dark); background: var(--color-point-dark); }
@@ -247,8 +252,8 @@ body [data-aos].hover-card { transition-property: opacity, transform, translate,
   .gnb__item { border-bottom: 1px solid var(--color-line); }
   .gnb__link { height: auto; padding: 18px 0; font-size: 19px; font-weight: 700; }
   .gnb__link::after { display: none; }
-  .gnb__sub { position: static; display: flex; flex-wrap: wrap; gap: 4px 16px; min-width: 0; padding: 0 0 16px; border: 0; background: none; box-shadow: none; opacity: 1; visibility: visible; transform: none; }
-  .gnb__sub-link { padding: 8px 0; font-size: 15px; }
+  .gnb__sub { position: static; display: flex; flex-wrap: wrap; gap: 0 20px; min-width: 0; padding: 0 0 16px; border: 0; background: none; box-shadow: none; opacity: 1; visibility: visible; transform: none; }
+  .gnb__sub-link { display: inline-flex; align-items: center; min-height: 44px; padding: 0; font-size: 15px; }
   .gnb__sub-link:hover { background: none; }
   .gnb__util { display: grid; gap: 10px; margin-top: auto; padding-top: 32px; }
 
