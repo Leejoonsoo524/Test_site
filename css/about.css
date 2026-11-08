@@ -33,15 +33,19 @@
 .facility-item__title { margin-top: 16px; font-size: 18px; }
 
 /* ---------- 주요활동 ---------- */
-.activity-list { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
-.activity-card { display: flex; flex-direction: column; padding: 12px 12px 28px; border: 1px solid var(--color-line); border-radius: var(--radius-lg); background: var(--color-white); box-shadow: var(--shadow-sm); }
-.activity-card__photo { aspect-ratio: 3 / 2; margin-bottom: 22px; border-radius: calc(var(--radius-lg) - 8px); }
+/* 데스크톱: 2×2 가로형 카드 (사진 왼쪽 · 글 오른쪽). 글 영역을 넓혀 가장 긴 설명도 2줄 안에 들어가게 합니다 */
+.activity-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+.activity-card { display: grid; grid-template-columns: 36% 1fr; grid-template-rows: auto auto 1fr; align-content: start; column-gap: 8px; padding: 12px; border: 1px solid var(--color-line); border-radius: var(--radius-lg); background: var(--color-white); box-shadow: var(--shadow-sm); }
+.activity-card__photo { position: relative; grid-row: 1 / 4; width: 100%; height: 100%; min-height: 220px; aspect-ratio: auto; border-radius: calc(var(--radius-lg) - 8px); }
+/* 사진 비율이 카드 높이를 바꾸지 않도록 칸 안에 꽉 채움 */
+.activity-card__photo img { position: absolute; inset: 0; }
 .activity-card--celebration .activity-card__photo img { object-position: 25% 50%; }
 .activity-card--rental .activity-card__photo img { object-position: 50% 20%; }
 .activity-card__title, .activity-card__desc { padding: 0 14px; }
-.activity-card__title { font-size: 21px; }
-.activity-card__desc { margin-top: 8px; color: var(--color-muted); font-size: 15px; }
-.activity-card__list { display: grid; gap: 4px; margin: 18px 14px 0; padding-top: 16px; border-top: 1px solid var(--color-line); color: var(--color-text); font-size: 14px; }
+.activity-card__title { padding-top: 16px; font-size: 21px; }
+/* 가장 긴 설명(2줄) 기준 최소 높이: 설명 길이가 달라도 아래 목록 선이 맞습니다 */
+.activity-card__desc { min-height: 3.5em; margin-top: 8px; color: var(--color-muted); font-size: 15px; line-height: 1.75; }
+.activity-card__list { display: grid; align-content: start; gap: 4px; margin: 18px 14px 16px; padding-top: 16px; border-top: 1px solid var(--color-line); color: var(--color-text); font-size: 14px; }
 .activity-card__list li::before { content: '· '; color: var(--color-point); }
 .activity-card:hover .activity-card__list li::before { color: var(--color-white); }
 .activity-note { margin-top: 40px; color: var(--color-muted); font-size: 15px; text-align: center; }
@@ -56,7 +60,12 @@
 
 @media (max-width: 1200px) {
   .greeting__inner { gap: 48px; }
-  .activity-list { grid-template-columns: repeat(2, 1fr); }
+  /* 1200px 이하: 세로형 카드 2열 (이 너비부터는 설명이 2줄 안에 들어갑니다) */
+  .activity-card { display: flex; flex-direction: column; padding: 12px 12px 28px; }
+  .activity-card__photo { height: auto; min-height: 0; aspect-ratio: 3 / 2; margin-bottom: 22px; }
+  .activity-card__photo img { position: static; }
+  .activity-card__title { padding-top: 0; }
+  .activity-card__list { margin-bottom: 0; }
 }
 
 @media (max-width: 1024px) {
@@ -66,9 +75,14 @@
   .approach-list { grid-template-columns: 1fr; gap: 12px; }
   .approach-list__item { display: grid; grid-template-columns: 64px 1fr; gap: 4px 16px; padding: 24px; }
   .approach-list__num { grid-row: 1 / 3; margin: 0; }
+  /* 2열이 좁아지는 구간(1024~769px)에서도 설명이 2줄 안에 들어가도록 글 영역을 조금 넓힘 */
+  .activity-card__title, .activity-card__desc { padding: 0 10px; }
+  .activity-card__desc { font-size: 14.5px; }
+  .activity-card__list { margin-right: 10px; margin-left: 10px; }
 }
 
 @media (max-width: 768px) {
   .greeting__desc { font-size: 16px; }
   .teacher-list, .facility-list, .activity-list { grid-template-columns: 1fr; }
+  .activity-card__desc { min-height: 0; } /* 1열: 높이를 맞출 필요 없음 */
 }
