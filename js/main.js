@@ -1,6 +1,6 @@
 /* =========================================================
    index.html — 메인 비주얼 슬라이드
-   2초마다 다음 사진으로 바뀝니다. 마우스를 올리거나 키보드 포커스가 있으면 멈춥니다.
+   3.5초마다 다음 사진으로 바뀝니다. 마우스를 올리거나 키보드 포커스가 있으면 멈춥니다.
    모션 최소화 설정을 켠 사용자에게는 자동으로 넘기지 않습니다.
    ========================================================= */
 (function () {
@@ -11,7 +11,7 @@
   var slides = Array.prototype.slice.call(media.querySelectorAll('.main-visual__slide'));
   if (slides.length < 2) return;
 
-  var DELAY = 2000;
+  var DELAY = 3500;
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var current = 0;
   var timer = null;
